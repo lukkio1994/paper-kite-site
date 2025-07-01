@@ -6,10 +6,22 @@
  * 
  * Sections:
  * - Hero: Introduction to the company
- * - Mission: Company values and goals
+ * - Mission: Official Paper Kite Games mission statement
+ * - Values: Company values and principles
  * - Team: Team member profiles (placeholder)
  * - History: Company timeline (placeholder)
+ * 
+ * Mission Statement: Uses the official mission statement from constants.ts
+ * To update the mission statement, edit MISSION_STATEMENT in src/lib/constants.ts
  */
+
+import type { Metadata } from "next";
+import { CONTACT_INFO, BRAND_CONTENT } from '@/lib/constants';
+
+export const metadata: Metadata = {
+  title: `About - ${CONTACT_INFO.company}`,
+  description: `Learn about ${CONTACT_INFO.company}. ${BRAND_CONTENT.tagline} ${BRAND_CONTENT.subline}`,
+};
 
 export default function About() {
   return (
@@ -37,16 +49,8 @@ export default function About() {
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 Our Mission
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                At Paper Kite Games, we believe that games have the power to transport 
-                players to new worlds, challenge their perspectives, and create lasting 
-                memories. Our mission is to craft games that are not just entertaining, 
-                but meaningful and transformative.
-              </p>
-              <p className="text-lg text-gray-600 dark:text-gray-300">
-                We focus on innovative gameplay mechanics, compelling storytelling, and 
-                beautiful art direction to create experiences that resonate with players 
-                long after they&apos;ve put down the controller.
+              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                {BRAND_CONTENT.missionStatement}
               </p>
             </div>
             <div className="bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 rounded-2xl p-8 h-64 flex items-center justify-center">

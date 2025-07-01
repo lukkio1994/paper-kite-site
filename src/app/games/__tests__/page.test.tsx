@@ -35,17 +35,23 @@ describe('Games Page', () => {
     const gameTitle = screen.getByRole('heading', { name: /this is not a dungeon/i });
     expect(gameTitle).toBeInTheDocument();
     
-    const gameDescription = screen.getByText(/a comedic strategy base-defense adventure/i);
+    // Look for the specific heading instead of the general text
+    const gameDescription = screen.getByRole('heading', { name: /comedic base-defense strategy game/i });
     expect(gameDescription).toBeInTheDocument();
+    
+    // The micro-tagline appears in multiple places, so check for the specific one in the header
+    const microTaglineElements = screen.getAllByText(/build\. defend\. survive\./i);
+    expect(microTaglineElements.length).toBeGreaterThan(0);
   });
 
   it('renders game features', () => {
     render(<Games />);
     
-    expect(screen.getByText(/strategic tower defense mechanics with humorous twists/i)).toBeInTheDocument();
-    expect(screen.getByText(/charming pixel art style with detailed animations/i)).toBeInTheDocument();
-    expect(screen.getByText(/clever puzzle elements and tactical gameplay/i)).toBeInTheDocument();
-    expect(screen.getByText(/witty dialogue and comedic storyline/i)).toBeInTheDocument();
+    // Check for new key features
+    expect(screen.getByText(/be the grumpy wizard/i)).toBeInTheDocument();
+    expect(screen.getByText(/build traps & rearrange rooms/i)).toBeInTheDocument();
+    expect(screen.getByText(/outsmart the heroes/i)).toBeInTheDocument();
+    expect(screen.getByText(/comedy, chaos & quirky cast/i)).toBeInTheDocument();
   });
 
   it('renders development progress section', () => {
@@ -53,9 +59,6 @@ describe('Games Page', () => {
     
     const progressHeading = screen.getByRole('heading', { name: /development progress/i });
     expect(progressHeading).toBeInTheDocument();
-    
-    const futureProjectsHeading = screen.getByRole('heading', { name: /future projects/i });
-    expect(futureProjectsHeading).toBeInTheDocument();
   });
 
   it('renders call to action buttons', () => {
@@ -71,7 +74,7 @@ describe('Games Page', () => {
     const { container } = render(<Games />);
 
     const sections = container.querySelectorAll('section');
-    expect(sections).toHaveLength(5); // Hero, Featured Game, Development Progress, Future Projects, Newsletter
+    expect(sections).toHaveLength(4); // Hero, Featured Game, Development Progress, Newsletter
   });
 
   it('has responsive layout classes', () => {
@@ -92,5 +95,13 @@ describe('Games Page', () => {
     
     const h3Elements = screen.getAllByRole('heading', { level: 3 });
     expect(h3Elements.length).toBeGreaterThan(0);
+  });
+
+  it('renders hero image with correct attributes', () => {
+    render(<Games />);
+    
+    const heroImage = screen.getByAltText(/promotional artwork for this is not a dungeon/i);
+    expect(heroImage).toBeInTheDocument();
+    expect(heroImage).toHaveAttribute('src', expect.stringContaining('tinad-hero.png'));
   });
 });

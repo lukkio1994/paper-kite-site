@@ -9,11 +9,16 @@
  * - Contact Form: Name, email, message form with Tailwind styling
  * - Contact Info: Alternative contact methods
  * - FAQ: Common questions
+ * 
+ * Business Email: paperkitegames@gmail.com
+ * This email is used consistently across the site for all contact purposes.
+ * To update the business email, search for "paperkitegames@gmail.com" across the codebase.
  */
 
 'use client';
 
 import { useState } from 'react';
+import { CONTACT_INFO } from '@/lib/constants';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -35,7 +40,11 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
+    // TODO: Implement form submission to paperkitegames@gmail.com
+    // This could be done via:
+    // 1. A backend API endpoint that sends emails
+    // 2. A service like EmailJS, Formspree, or Netlify Forms
+    // 3. A serverless function (Vercel, Netlify)
     console.log('Form submitted:', formData);
     setIsSubmitted(true);
     
@@ -190,8 +199,13 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">Email</h3>
-                    <p className="text-gray-600 dark:text-gray-300">hello@paperkitegames.com</p>
-                    <p className="text-gray-600 dark:text-gray-300">support@paperkitegames.com</p>
+                    <a 
+                      href={CONTACT_INFO.emailMailto} 
+                      className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors duration-200"
+                      aria-label="Send email to Paper Kite Games"
+                    >
+                      {CONTACT_INFO.email}
+                    </a>
                   </div>
                 </div>
 
@@ -288,7 +302,15 @@ export default function Contact() {
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
                 Yes! Please contact us with your press inquiry using the form above or email 
-                us directly at press@paperkitegames.com with your media credentials.
+                us directly at{' '}
+                <a 
+                  href={CONTACT_INFO.emailMailto} 
+                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors duration-200"
+                  aria-label="Send press inquiry email to Paper Kite Games"
+                >
+                  {CONTACT_INFO.email}
+                </a>
+                {' '}with your media credentials.
               </p>
             </div>
 

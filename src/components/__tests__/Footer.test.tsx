@@ -2,10 +2,12 @@
  * Footer Component Tests
  * 
  * Tests for the Footer component functionality, rendering, and accessibility.
+ * Includes tests for the new brand tagline.
  */
 
 import { render, screen } from '@testing-library/react';
 import Footer from '../Footer';
+import { BRAND_CONTENT } from '@/lib/constants';
 
 describe('Footer', () => {
   it('renders copyright text', () => {
@@ -15,6 +17,12 @@ describe('Footer', () => {
     const copyrightText = screen.getByText(`© ${currentYear} Paper Kite Games. All rights reserved.`);
     
     expect(copyrightText).toBeInTheDocument();
+  });
+
+  it('renders brand tagline', () => {
+    render(<Footer />);
+    
+    expect(screen.getByText(BRAND_CONTENT.tagline)).toBeInTheDocument();
   });
 
   it('renders social media links with proper accessibility', () => {

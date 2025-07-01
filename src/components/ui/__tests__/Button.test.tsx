@@ -99,4 +99,46 @@ describe('Button Component', () => {
     render(<Button ref={ref}>Button with ref</Button>)
     expect(ref).toHaveBeenCalled()
   })
+
+  it('handles edge cases and error conditions', () => {
+    // Test with both loading and disabled
+    render(<Button loading disabled>Loading & Disabled</Button>)
+    const button = screen.getByRole('button')
+    expect(button).toBeDisabled()
+    expect(button).toHaveClass('cursor-wait')
+  })
+
+  it('handles click events when disabled', () => {
+    const handleClick = jest.fn()
+    render(<Button onClick={handleClick} disabled>Disabled Button</Button>)
+    
+    fireEvent.click(screen.getByRole('button'))
+    expect(handleClick).not.toHaveBeenCalled()
+  })
+
+  it('handles click events when loading', () => {
+    const handleClick = jest.fn()
+    render(<Button onClick={handleClick} loading>Loading Button</Button>)
+    
+    fireEvent.click(screen.getByRole('button'))
+    expect(handleClick).not.toHaveBeenCalled()
+  })
+
+  it('preserves other HTML attributes', () => {
+    render(
+      <Button 
+        data-testid="custom-button" 
+        tabIndex={-1}
+        role="button"
+        title="Custom title"
+      >
+        Custom Button
+      </Button>
+    )
+    
+    const button = screen.getByRole('button')
+    expect(button).toHaveAttribute('data-testid', 'custom-button')
+    expect(button).toHaveAttribute('tabIndex', '-1')
+    expect(button).toHaveAttribute('title', 'Custom title')
+  })
 })

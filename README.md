@@ -74,7 +74,6 @@ paper-kite-site/
 ### Games (`/games`)
 - Featured game showcase (Aera)
 - Development progress tracking
-- Future projects preview
 - Newsletter subscription
 
 ### Contact (`/contact`)

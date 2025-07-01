@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { CONTACT_INFO, BRAND_CONTENT } from "@/lib/constants";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Paper Kite Games",
-  description: "Indie game development studio creating immersive gaming experiences",
+  title: `${CONTACT_INFO.company} - ${BRAND_CONTENT.tagline}`,
+  description: `${BRAND_CONTENT.subline} Indie game development studio creating simple, joyful gaming experiences.`,
 };
 
 export default function RootLayout({

@@ -2,15 +2,20 @@
  * Footer Component
  * 
  * Footer component for Paper Kite Games website.
- * Contains copyright information and social media placeholders.
+ * Contains copyright information, contact email, and social media placeholders.
  * 
  * Usage:
  * - Import and use in layout.tsx
  * - Responsive design with centered content
  * - Social media icons with hover effects
+ * 
+ * Business Email: paperkitegames@gmail.com
+ * This email is used consistently across the site for all contact purposes.
+ * To update the business email, search for "paperkitegames@gmail.com" across the codebase.
  */
 
 import Link from 'next/link';
+import { CONTACT_INFO, BRAND_CONTENT } from '@/lib/constants';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -49,10 +54,22 @@ const Footer = () => {
     <footer className="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
       <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0">
-          {/* Copyright */}
-          <div className="text-center sm:text-left">
+          {/* Copyright and Contact Email */}
+          <div className="text-center sm:text-left space-y-1">
             <p className="text-sm text-gray-600 dark:text-gray-400">
               © {currentYear} Paper Kite Games. All rights reserved.
+            </p>
+            <p className="text-sm italic text-gray-500 dark:text-gray-500">
+              {BRAND_CONTENT.tagline}
+            </p>
+            <p className="text-sm">
+              <a 
+                href={CONTACT_INFO.emailMailto} 
+                className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors duration-200"
+                aria-label="Contact Paper Kite Games via email"
+              >
+                {CONTACT_INFO.email}
+              </a>
             </p>
           </div>
 

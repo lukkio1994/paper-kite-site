@@ -2,33 +2,20 @@
  * Home Page
  * 
  * Landing page for Paper Kite Games website.
- * Features a hero section with company branding, mission statement, and showcases the featured game
+ * Features a hero section with company branding and showcases the featured game
  * "This Is Not A Dungeon" - a comedic strategy base-defense game.
  * 
  * Sections:
- * - Hero: Main banner with new tagline, subline, mission statement, and primary CTA
+ * - Hero: Main banner with branding and primary CTA
  * - Features: Brief highlights of what the studio offers
  * - Featured Game: Showcase of "This Is Not A Dungeon"
- * 
- * Mission Statement: Uses the official mission statement from constants.ts
- * To update the mission statement, edit MISSION_STATEMENT in src/lib/constants.ts
- * 
- * Tagline: Uses the official brand tagline from constants.ts
- * To update the tagline, edit BRAND_TAGLINE in src/lib/constants.ts
  * 
  * @page
  */
 
-import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroSection } from "@/components/ui/HeroSection";
 import { Button } from "@/components/ui/Button";
-import { CONTACT_INFO, BRAND_CONTENT, TINIAD_CONTENT } from "@/lib/constants";
-
-export const metadata: Metadata = {
-  title: `${CONTACT_INFO.company} - ${BRAND_CONTENT.tagline}`,
-  description: `${BRAND_CONTENT.subline} Indie game development studio creating meaningful gaming experiences.`,
-};
 
 export default function Home() {
   // Paper Kite Games logo component
@@ -43,8 +30,8 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection
         title="Paper Kite Games"
-        subtitle={BRAND_CONTENT.tagline}
-        description={BRAND_CONTENT.subline}
+        subtitle="Crafting immersive gaming experiences that soar beyond imagination"
+        description="We're an indie game development studio passionate about creating unique, engaging games that bring joy and challenge to players worldwide."
         primaryCta={{
           text: "Explore Our Games",
           href: "/games"
@@ -55,14 +42,7 @@ export default function Home() {
         }}
         logo={<Logo />}
         backgroundVariant="gradient"
-      >
-        {/* Mission Statement */}
-        <div className="max-w-4xl mx-auto mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
-          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed text-center italic">
-            &ldquo;{BRAND_CONTENT.missionStatement}&rdquo;
-          </p>
-        </div>
-      </HeroSection>
+      />
 
       {/* Features Section */}
       <section className="py-20 bg-white dark:bg-gray-800">
@@ -135,11 +115,8 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               This Is Not A Dungeon
             </h2>
-            <p className="text-xl text-dungeon-gold font-semibold mb-2">
-              {TINIAD_CONTENT.microTagline}
-            </p>
             <p className="text-xl text-purple-100">
-              A comedic base-defense strategy game for PC
+              A comedic strategy base-defense game where you play as a weak dark mage
             </p>
           </div>
           
@@ -166,35 +143,29 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-4">
                   Defend Your &quot;Totally Not A Dungeon&quot;
                 </h3>
-                <div className="text-gray-200 mb-6 leading-relaxed space-y-3">
-                  <p>
-                    {TINIAD_CONTENT.descriptionPart1}
-                  </p>
-                  <p className="text-sm">
-                    {TINIAD_CONTENT.descriptionPart2}
-                  </p>
-                </div>
+                <p className="text-gray-200 mb-6 leading-relaxed">
+                  You&apos;re a weak dark mage who definitely doesn&apos;t have a dungeon (wink wink). 
+                  Defend your perfectly legitimate underground lair from heroes using cunning 
+                  strategy, creative traps, and a healthy dose of humor.
+                </p>
                 
-                {/* Official Launch Key Features */}
-                <ul className="space-y-3 mb-8">
-                  {TINIAD_CONTENT.keyFeatures.slice(0, 4).map((feature, index) => (
-                    <li key={index} className="flex items-start space-x-3">
+                <div className="space-y-3 mb-8">
+                  {[
+                    'Strategic tower defense with a comedic twist',
+                    'Play as the "villain" for once',
+                    'Unique magic system and trap combinations',
+                    'Charming pixel art and witty dialogue'
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-start space-x-3">
                       <div className="w-5 h-5 bg-dungeon-gold rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-xs" aria-label={feature.title}>
-                          {feature.emoji}
-                        </span>
+                        <svg className="w-3 h-3 text-dungeon-dark" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
                       </div>
-                      <div className="flex-1">
-                        <span className="text-gray-200 text-sm font-medium">
-                          {feature.title}
-                        </span>
-                        <span className="text-gray-300 text-sm block mt-1">
-                          {feature.description}
-                        </span>
-                      </div>
-                    </li>
+                      <span className="text-gray-200 text-sm">{feature}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
                 
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link href="/games">

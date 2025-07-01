@@ -2,10 +2,12 @@
  * About Page Tests
  * 
  * Tests for the About page component rendering and content.
+ * Includes tests for the official mission statement.
  */
 
 import { render, screen } from '@testing-library/react';
 import About from '../page';
+import { BRAND_CONTENT } from '@/lib/constants';
 
 describe('About Page', () => {
   it('renders main heading', () => {
@@ -22,14 +24,14 @@ describe('About Page', () => {
     expect(description).toBeInTheDocument();
   });
 
-  it('renders mission section', () => {
+  it('renders mission section with official mission statement', () => {
     render(<About />);
     
     const missionHeading = screen.getByRole('heading', { name: /our mission/i });
     expect(missionHeading).toBeInTheDocument();
     
-    const missionText = screen.getByText(/at paper kite games, we believe/i);
-    expect(missionText).toBeInTheDocument();
+    // Check for the official mission statement
+    expect(screen.getByText(BRAND_CONTENT.missionStatement)).toBeInTheDocument();
   });
 
   it('renders values section with all three values', () => {
