@@ -1,0 +1,21 @@
+{
+  "name": "Paper Kite Games",
+  "short_name": "Paper Kite",
+  "description": "Indie game development studio creating simple, joyful gaming experiences",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6BAF92",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/paper_kite_favicon_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

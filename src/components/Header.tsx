@@ -1,9 +1,14 @@
 /**
- * Header Component
+ * Header Component with Internationalization
  * 
- * Main navigation header for Paper Kite Games website.
+ * Main navigation header for Paper Kite Games website with i18n support.
  * Features responsive design with mobile hamburger menu, active page highlighting,
  * and accessibility-compliant navigation structure.
+ * 
+ * Now includes:
+ * - Translation support via useTranslations
+ * - Dynamic navigation text from translation files
+ * - Locale-aware routing
  * 
  * @component
  * @example
@@ -11,14 +16,6 @@
  * // Used in layout.tsx
  * <Header />
  * ```
- * 
- * Features:
- * - Responsive navigation (mobile hamburger menu)
- * - Active page highlighting
- * - Keyboard navigation support
- * - ARIA labels for accessibility
- * - Dark mode support
- * - Paper Kite Games branding
  */
 
 'use client';
@@ -26,24 +23,30 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 
 interface NavigationItem {
-  name: string;
+  key: string; // Translation key instead of static name
   href: string;
   external?: boolean;
 }
 
+// Navigation items using translation keys instead of hardcoded text
 const navigationItems: NavigationItem[] = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Games', href: '/games' },
-  { name: 'Contact', href: '/contact' },
+  { key: 'home', href: '/' },
+  { key: 'about', href: '/about' },
+  { key: 'games', href: '/games' },
+  { key: 'contact', href: '/contact' },
 ];
 
 export default function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  // Load navigation translations
+  const t = useTranslations('navigation');
+  const common = useTranslations('common');
 
   // Close mobile menu when pathname changes
   useEffect(() => {
@@ -104,7 +107,7 @@ export default function Header() {
                 <span className="text-white font-bold text-sm" aria-hidden="true">PK</span>
               </div>
               <span className="ml-2 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-brand-primary transition-colors">
-                Paper Kite Games
+                {common('companyName')}
               </span>
             </Link>
           </div>
@@ -114,7 +117,7 @@ export default function Header() {
             <div className="ml-10 flex items-baseline space-x-4">
               {navigationItems.map((item) => (
                 <Link
-                  key={item.name}
+                  key={item.key}
                   href={item.href}
                   className={cn(
                     'px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary',
@@ -124,7 +127,7 @@ export default function Header() {
                   )}
                   aria-current={isActivePage(item.href) ? 'page' : undefined}
                 >
-                  {item.name}
+                  {t(item.key as keyof typeof t)}
                 </Link>
               ))}
             </div>
@@ -188,7 +191,7 @@ export default function Header() {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
               {navigationItems.map((item) => (
                 <Link
-                  key={item.name}
+                  key={item.key}
                   href={item.href}
                   className={cn(
                     'block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary',
@@ -199,7 +202,7 @@ export default function Header() {
                   onClick={() => setIsMobileMenuOpen(false)}
                   aria-current={isActivePage(item.href) ? 'page' : undefined}
                 >
-                  {item.name}
+                  {t(item.key as keyof typeof t)}
                 </Link>
               ))}
             </div>
