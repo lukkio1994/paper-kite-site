@@ -28,7 +28,6 @@ export async function generateMetadata({
 
 export default async function AboutPage() {
   const t = await getTranslations('about');
-  const common = await getTranslations('common');
 
   return (
     <div className="min-h-screen">
