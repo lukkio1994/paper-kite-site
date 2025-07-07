@@ -1,227 +1,67 @@
 {
-  "common": {
-    "companyName": "Paper Kite Games",
-    "siteTagline": "Creating simple, joyful gaming experiences",
-    "siteDescription": "Indie game development studio creating simple, joyful gaming experiences. We're passionate about making games that bring joy, challenge, and wonder to players around the world.",
-    "fallbackExample": "English (default)"
+  "_meta": {
+    "configVersion": "1.0"
   },
-  "navigation": {
-    "home": "Home",
-    "about": "About",
-    "games": "Games",
-    "contact": "Contact"
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page"
   },
-  "home": {
-    "heroTagline": "Creating simple, joyful gaming experiences",
-    "heroDescription": "We're an indie game development studio passionate about creating unique, immersive gaming experiences that captivate and inspire players worldwide.",
-    "missionStatement": "We believe games have the power to bring people together, spark creativity, and create lasting memories. Our mission is to craft experiences that are not just entertaining, but meaningful.",
-    "whatWeDo": {
-      "title": "What We Do",
-      "description": "We're passionate about creating games that bring joy, challenge, and wonder to players around the world."
-    },
-    "features": {
-      "innovation": {
-        "title": "Innovative Gameplay",
-        "description": "We push the boundaries of traditional gaming with fresh mechanics and creative storytelling."
-      },
-      "playerFocused": {
-        "title": "Player-Focused",
-        "description": "Every design decision is made with our players in mind, ensuring enjoyable and accessible experiences."
-      },
-      "quality": {
-        "title": "Quality Craftsmanship",
-        "description": "We take pride in polished, well-crafted games that stand the test of time."
-      }
-    },
-    "featuredGame": {
-      "label": "Featured Game",
-      "title": "This Is Not A Dungeon",
-      "tagline": "A comedic strategy base-defense adventure",
-      "subtitle": "A comedic base-defense strategy game for PC",
-      "description": "Join our quirky heroes as they defend their definitely-not-a-dungeon from waves of confused adventurers who just can't take a hint.",
-      "imageAlt": "This Is Not A Dungeon - Promotional artwork showing grumpy wizard, quirky heroes, and minions",
-      "keyFeatures": {
-        "title": "Key Features:",
-        "humor": "Witty dialogue and absurd situations",
-        "strategy": "Deep strategic base-defense mechanics",
-        "characters": "Memorable characters with unique abilities",
-        "challenge": "Progressively challenging gameplay"
-      },
-      "cta": "Learn More About Our Games"
-    }
+  "AboutPage": {
+    "title": "About Us",
+    "description": "This is the about page content."
   },
-  "about": {
-    "pageTitle": "About Us",
-    "pageDescription": "Learn about Paper Kite Games. We're an indie game development studio passionate about creating unique, immersive gaming experiences.",
-    "hero": {
-      "title": "About Paper Kite Games",
-      "description": "We are an indie game development studio passionate about creating unique, immersive gaming experiences that captivate and inspire players worldwide."
-    },
-    "mission": {
-      "title": "Our Mission",
-      "statement": "We believe games have the power to bring people together, spark creativity, and create lasting memories.",
-      "description": "Our mission is to craft experiences that are not just entertaining, but meaningful. We strive to create games that resonate with players long after they've put down the controller.",
-      "tagline": "Simple. Joyful. Memorable."
-    },
-    "values": {
-      "title": "Our Values",
-      "description": "These core values guide everything we do, from initial concept to final release.",
-      "creativity": {
-        "title": "Creativity",
-        "description": "We embrace bold ideas and innovative approaches to game design, always pushing the boundaries of what's possible."
+  "config": {
+    "header": {
+      "logo": {
+        "text": "My Next.js App"
       },
-      "quality": {
-        "title": "Quality",
-        "description": "Every game we create is crafted with meticulous attention to detail and a commitment to excellence."
+      "navigation": {
+        "features": "Features",
+        "pricing": "Pricing",
+        "about": "About",
+        "featuresAnalytics": "Analytics Dashboard",
+        "featuresAnalyticsDescription": "Comprehensive data insights and reporting",
+        "featuresCollaboration": "Team Collaboration", 
+        "featuresCollaborationDescription": "Real-time team workspace and communication"
       },
-      "community": {
-        "title": "Community",
-        "description": "We build games with our players in mind, fostering inclusive communities and meaningful connections."
+      "actions": {
+        "signIn": "Sign In",
+        "getStarted": "Get Started"
+      },
+      "accessibility": {
+        "logoAriaLabel": "My Next.js App - Go to homepage",
+        "mobileMenuAriaLabel": "Toggle main navigation menu",
+        "navigationAriaLabel": "Main navigation"
       }
     },
-    "team": {
-      "title": "Our Team",
-      "description": "Meet the passionate individuals behind Paper Kite Games.",
-      "members": [
-        {
-          "id": "david",
-          "name": "David Leon",
-          "role": "Senior Developer",
-          "description": "Experienced developer focused on building robust and scalable game systems.",
-          "initials": "DL",
-          "gradientFrom": "blue-400",
-          "gradientTo": "purple-500",
-          "socials": {
-            "linkedin": "",
-            "twitter": "",
-            "discord": "",
-            "instagram": ""
-          }
-        },
-        {
-          "id": "luis",
-          "name": "Luis Sequeira", 
-          "role": "Lead Developer",
-          "description": "Leading the technical vision and ensuring high-quality code standards.",
-          "initials": "LS",
-          "gradientFrom": "green-400",
-          "gradientTo": "blue-500",
-          "socials": {
-            "linkedin": "",
-            "twitter": "",
-            "discord": "",
-            "instagram": ""
-          }
-        },
-        {
-          "id": "carlos",
-          "name": "Carlos Sequeira",
-          "role": "UI/UX Designer", 
-          "description": "Creating intuitive and beautiful user experiences for our games.",
-          "initials": "CS",
-          "gradientFrom": "purple-400",
-          "gradientTo": "pink-500",
-          "socials": {
-            "linkedin": "",
-            "twitter": "",
-            "discord": "",
-            "instagram": ""
-          }
-        }
-      ],
-      "placeholder": {
-        "title": "Growing Team",
-        "description": "We're a small but dedicated team of game developers, artists, and storytellers working together to create amazing experiences."
-      }
-    }
-  },
-  "games": {
-    "pageTitle": "Our Games",
-    "pageDescription": "Explore the games created by Paper Kite Games. From strategy to adventure, discover unique gaming experiences.",
-    "hero": {
-      "title": "Our Games",
-      "description": "Discover our collection of unique gaming experiences, each crafted with passion and attention to detail."
-    },
-    "featured": {
-      "label": "Featured Game"
-    },
-    "tiniad": {
-      "title": "This Is Not A Dungeon",
-      "tagline": "A comedic strategy base-defense adventure",
-      "subtitle": "A comedic base-defense strategy game for PC",
-      "description": "Join our quirky heroes as they defend their definitely-not-a-dungeon from waves of confused adventurers who just can't take a hint. Featuring strategic gameplay, witty dialogue, and progressively challenging scenarios.",
-      "imageAlt": "This Is Not A Dungeon - Promotional artwork showing grumpy wizard, quirky heroes, and minions",
-      "features": {
-        "title": "Key Features",
-        "humor": "Witty dialogue and absurd situations",
-        "strategy": "Deep strategic base-defense mechanics",
-        "characters": "Memorable characters with unique abilities",
-        "challenge": "Progressively challenging gameplay"
+    "footer": {
+      "contact": {
+        "address": "123 Business Street, City, State 12345",
+        "phone": "+1 (800) 555-0123",
+        "email": "contact@mynextjsapp.com"
       },
-      "status": "In Development",
-      "platform": "PC",
-      "cta": "Get Updates"
-    },
-    "upcoming": {
-      "title": "More Games Coming Soon",
-      "description": "We're always working on new projects and exciting gaming experiences.",
-      "placeholder": {
-        "title": "Future Projects",
-        "description": "Stay tuned for announcements about our upcoming games and projects.",
-        "cta": "Contact Us for Updates"
-      }
-    }
-  },
-  "contact": {
-    "pageTitle": "Contact Us",
-    "pageDescription": "Get in touch with Paper Kite Games. We'd love to hear from you about our games, collaborations, or just to say hello.",
-    "hero": {
-      "title": "Get In Touch",
-      "description": "We'd love to hear from you! Whether you have questions about our games, want to collaborate, or just want to say hello."
-    },
-    "info": {
-      "title": "Contact Information",
-      "email": {
-        "title": "Email Us",
-        "description": "Send us a message and we'll get back to you as soon as possible."
+      "social": {
+        "twitter": "Twitter",
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
       },
-      "business": {
-        "title": "Business Inquiries",
-        "description": "Interested in partnerships, press coverage, or collaboration opportunities? We'd love to discuss."
+      "legal": {
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
       },
-      "response": {
-        "title": "Response Time",
-        "description": "We typically respond to emails within 24-48 hours during business days."
-      }
-    },
-    "form": {
-      "title": "Send Us a Message",
-      "placeholder": {
-        "title": "Contact Form Coming Soon",
-        "description": "For now, please reach out to us directly via email. We're working on a contact form for your convenience.",
-        "cta": "Send Email"
-      }
-    },
-    "faq": {
-      "title": "Frequently Asked Questions",
-      "description": "Find answers to common questions about our games and company.",
-      "items": {
-        "gameUpdates": {
-          "question": "How can I get updates about your games?",
-          "answer": "Follow us on social media or send us an email to stay informed about our latest developments and releases."
-        },
-        "collaboration": {
-          "question": "Do you accept collaboration proposals?",
-          "answer": "We're always open to interesting collaboration opportunities. Please reach out via email with your proposal."
-        },
-        "support": {
-          "question": "Where can I get support for your games?",
-          "answer": "For technical support or game-related questions, please contact us via email and we'll help you out."
-        },
-        "press": {
-          "question": "Are you available for press inquiries?",
-          "answer": "Yes! We're happy to discuss our games with press and media. Please reach out via email for press kits and interviews."
-        }
+      "product": {
+        "features": "Features",
+        "pricing": "Pricing"
+      },
+      "copyright": "© 2025 My Next.js App. All rights reserved.",
+      "accessibility": {
+        "footerAriaLabel": "Website footer with company information and links",
+        "socialLinksAriaLabel": "Follow us on social media",
+        "legalLinksAriaLabel": "Legal information and policies",
+        "productLinksAriaLabel": "Product information and features",
+        "contactInfoAriaLabel": "Contact information and office details",
+        "backToTopAriaLabel": "Return to top of page",
+        "copyrightAriaLabel": "Copyright and legal notice"
       }
     }
   }

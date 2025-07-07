@@ -1,0 +1,119 @@
+{
+  "header": {
+    "logo": {
+      "text": "t('header.logo.text')",
+      "href": "/"
+    },
+    "navigation": [
+      {
+        "label": "t('header.navigation.features')",
+        "href": "/features",
+        "subItems": [
+          {
+            "label": "t('header.navigation.features.analytics')",
+            "href": "/features/analytics",
+            "description": "t('header.navigation.features.analytics.description')"
+          },
+          {
+            "label": "t('header.navigation.features.collaboration')",
+            "href": "/features/collaboration",
+            "description": "t('header.navigation.features.collaboration.description')"
+          }
+        ]
+      },
+      {
+        "label": "t('header.navigation.pricing')",
+        "href": "/pricing"
+      },
+      {
+        "label": "t('header.navigation.about')",
+        "href": "/about"
+      }
+    ],
+    "actions": [
+      {
+        "label": "t('header.actions.signIn')",
+        "href": "/auth/signin",
+        "variant": "ghost",
+        "size": "sm"
+      },
+      {
+        "label": "t('header.actions.getStarted')",
+        "href": "/auth/signup",
+        "variant": "primary",
+        "size": "sm"
+      }
+    ],
+    "appearance": {
+      "variant": "elevated",
+      "background": "default",
+      "sticky": true,
+      "showBorder": true,
+      "height": "default",
+      "mobileMenuBreakpoint": "md",
+      "navigationAlignment": "right",
+      "className": ""
+    },
+    "mobile": {
+      "showLogo": true,
+      "showActions": true,
+      "menuPosition": "right",
+      "overlayBackground": "blur"
+    },
+    "accessibility": {
+      "skipToContentHref": "#main-content",
+      "logoAriaLabel": "t('header.accessibility.logoAriaLabel')",
+      "mobileMenuAriaLabel": "t('header.accessibility.mobileMenuAriaLabel')",
+      "navigationAriaLabel": "t('header.accessibility.navigationAriaLabel')"
+    }
+  },
+  "footer": {
+    "contact": {
+      "address": "t('footer.contact.address')",
+      "phone": "t('footer.contact.phone')",
+      "email": "t('footer.contact.email')"
+    },
+    "socialLinks": [
+      {
+        "platform": "t('footer.social.twitter')",
+        "href": "https://twitter.com/yourcompany"
+      },
+      {
+        "platform": "t('footer.social.linkedin')",
+        "href": "https://linkedin.com/company/yourcompany"
+      },
+      {
+        "platform": "t('footer.social.github')",
+        "href": "https://github.com/yourcompany"
+      }
+    ],
+    "legalLinks": [
+      {
+        "label": "t('footer.legal.privacy')",
+        "href": "/privacy"
+      },
+      {
+        "label": "t('footer.legal.terms')",
+        "href": "/terms"
+      }
+    ],
+    "productLinks": [
+      {
+        "label": "t('footer.product.features')",
+        "href": "/features"
+      },
+      {
+        "label": "t('footer.product.pricing')",
+        "href": "/pricing"
+      }
+    ],
+    "appearance": {
+      "variant": "detailed",
+      "background": "dark",
+      "showBackToTop": true,
+      "showDividers": true,
+      "className": "w-screen max-w-none !mx-0 !px-0"
+    },
+    "copyright": "t('footer.copyright')"
+  }
+}

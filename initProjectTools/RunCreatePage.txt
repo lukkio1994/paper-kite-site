@@ -1,0 +1,14 @@
+Copilot, please help me generate pages from our PageReference docs.
+
+Step 1: Ask me for the list of pages I want to generate (e.g., Home, About, Blog Post ([slug]), etc.).
+
+Step 2: For the pages I provide:
+- Search all PageReference files for these pages.
+- Copy the page contents (tsx code) from the matching PageReference markdown file.
+- Create the necessary folders for each page under src/app/[locale]/<page> (e.g., src/app/[locale]/about/page.tsx).
+- For each page you create, also generate a meaningful unit test file (not empty) using React Testing Library, placed next to the page file. The test should render the page and assert on key UI elements or text from the page content.
+- Output a txt file in this folder listing any pages you could not find a reference for (e.g., missing-pages.txt).
+
+Step 3: Validate that the correct files were created in src/app/[locale], and report any missing or failed pages.
+
+Note: Do not use the PowerShell script. Copilot will perform all actions directly.

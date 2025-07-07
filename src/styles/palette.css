@@ -1,0 +1,93 @@
+:root {
+  /* =================== */
+  /* 🎨 Light Palette    */
+  /* =================== */
+
+/* Base structure */
+--color-cstm-background: #f9fafb;          /* light neutral */
+--color-cstm-surface: #ffffff;             /* white surface */
+--color-cstm-overlay: rgba(0, 0, 0, 0.4);  /* modal overlay */
+
+--color-cstm-foreground: #1f2937;          /* dark gray text */
+--color-cstm-muted: #6b7280;               /* muted gray */
+--color-cstm-border: #e5e7eb;              /* light border */
+
+/* Functional colors */
+--color-cstm-primary: #3b82f6;             /* mid-tone sky blue */
+--color-cstm-primary-light: #60a5fa;       /* hover variant */
+--color-cstm-primary-dark: #2563eb;        /* pressed variant */
+
+--color-cstm-secondary: #a78bfa;           /* lilac / lavender */
+--color-cstm-accent: #10b981;              /* mint (CTA, highlights) */
+--color-cstm-success: #22c55e;             /* vibrant green */
+--color-cstm-info: #0ea5e9;                /* sky blue info */
+--color-cstm-warn: #f59e0b;                /* amber warn */
+--color-cstm-error: #ef4444;               /* red error */
+
+
+  /* System */
+  --color-cstm-white: #ffffff;               /* pure white for text/icons if needed */
+  --color-cstm-black: #000000;               /* pure black for overlays if needed */
+}
+
+[data-theme="dark"] {
+  /* =================== */
+  /* 🌑 Dark Palette      */
+  /* =================== */
+
+/* Base structure */
+--color-cstm-background: #1f2937;          /* charcoal background */
+--color-cstm-surface: #273245;             /* dark blue-gray surface */
+--color-cstm-overlay: rgba(0, 0, 0, 0.6);  /* darker modal overlay */
+
+--color-cstm-foreground: #f3f4f6;          /* light text */
+--color-cstm-muted: #9ca3af;               /* muted light gray */
+--color-cstm-border: #374151;              /* dark border */
+
+/* Functional colors */
+--color-cstm-primary: #60a5fa;             /* lighter sky blue for clarity */
+--color-cstm-primary-light: #93c5fd;       /* hover variant */
+--color-cstm-primary-dark: #3b82f6;        /* pressed variant */
+
+--color-cstm-secondary: #c4b5fd;           /* lighter lilac for visibility */
+--color-cstm-accent: #34d399;              /* brighter mint for dark mode */
+--color-cstm-success: #4ade80;             /* vibrant green */
+--color-cstm-info: #38bdf8;                /* sky blue info */
+--color-cstm-warn: #fbbf24;                /* lighter amber */
+--color-cstm-error: #f87171;               /* lighter red */
+
+  /* System */
+  --color-cstm-white: #ffffff;               /* pure white for highlights */
+  --color-cstm-black: #000000;               /* pure black for shadows */
+}
+
+@theme inline {
+  /* ============================== */
+  /* 🪄 Theme Registration for Tailwind utilities */
+  /* ============================== */
+
+  /* Base structure */
+  --color-background: var(--color-cstm-background);
+  --color-surface: var(--color-cstm-surface);
+  --color-overlay: var(--color-cstm-overlay);
+
+  --color-foreground: var(--color-cstm-foreground);
+  --color-muted: var(--color-cstm-muted);
+  --color-border: var(--color-cstm-border);
+
+  /* Functional colors */
+  --color-primary: var(--color-cstm-primary);
+  --color-primary-light: var(--color-cstm-primary-light);
+  --color-primary-dark: var(--color-cstm-primary-dark);
+
+  --color-secondary: var(--color-cstm-secondary);
+  --color-accent: var(--color-cstm-accent);
+  --color-success: var(--color-cstm-success);
+  --color-info: var(--color-cstm-info);
+  --color-warn: var(--color-cstm-warn);
+  --color-error: var(--color-cstm-error);
+
+  /* System */
+  --color-white: var(--color-cstm-white);
+  --color-black: var(--color-cstm-black);
+}

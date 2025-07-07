@@ -1,152 +1,157 @@
-# Paper Kite Games Website
+# Next.js Template - Production Ready
 
-A modern, responsive website built with Next.js 15, TypeScript, and Tailwind CSS v4.
+This is a **production-ready Next.js template** with centralized configuration, modern TypeScript, and enterprise-grade components.
 
-## 🚀 Project Overview
+## 🚀 Key Features
 
-This is the official website for Paper Kite Games, an indie game development studio. The site showcases our games, company information, and provides contact capabilities.
+- **Centralized Header & Footer**: Configure all content from single config files
+- **TypeScript First**: Full type safety with comprehensive interfaces
+- **Accessibility Ready**: WCAG 2.1 AA compliant components
+- **Responsive Design**: Mobile-first with smooth animations
+- **Dark Mode Support**: Complete theming system
+- **Production Tested**: Zero build errors, lint-clean codebase
+
+## ⚡ Quick Start
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to see the application.
+
+## 📋 Configuration Guide
+
+### Header Configuration
+Edit `src/lib/header-config.ts` to customize:
+- Logo (text or image)
+- Navigation menu with dropdowns
+- Action buttons (Sign In, Get Started, etc.)
+- Appearance and mobile behavior
+- Accessibility settings
+
+### Footer Configuration  
+Edit `src/lib/footer-config.ts` to customize:
+- Contact information
+- Social media links
+- Footer sections and links
+- Appearance and layout
+
+**📖 Complete Documentation:**
+- **[Documentation Index](./docs/README.md)** - **Start here!** Complete documentation glossary
+- **[Getting Started Guide](./docs/guides/getting-started.md)** - 5-minute customization guide
+- **[Component Library](./docs/components/overview.md)** - Complete component reference
+- **[Configuration Guide](./docs/configuration/header.md)** - Header and footer setup
+- **[Architecture Overview](./docs/architecture/overview.md)** - Technical patterns and design
+
+## ⚡ Performance & SEO
+
+- **Optimized Bundle**: Minimal JavaScript for fast loading
+- **SEO Ready**: Proper meta tags and semantic HTML
+- **Core Web Vitals**: Optimized for Google's performance metrics
+- **Progressive Enhancement**: Works without JavaScript
+
+## 🛠 Development
+
+```bash
+npm run dev    # Start development server
+npm run build  # Create production build  
+npm run start  # Start production server
+npm run lint   # Run ESLint checks
+```
+
+```bash
+npm run dev    # Start development server
+npm run build  # Create production build  
+npm run start  # Start production server
+npm run lint   # Run ESLint checks
+```
 
 ## 📁 Project Structure
 
 ```
-paper-kite-site/
-├── src/
-│   ├── app/                    # Next.js App Router pages
-│   │   ├── about/              # About page
-│   │   │   └── page.tsx
-│   │   ├── games/              # Games showcase page
-│   │   │   └── page.tsx
-│   │   ├── contact/            # Contact form page
-│   │   │   └── page.tsx
-│   │   ├── layout.tsx          # Root layout with Header/Footer
-│   │   ├── page.tsx            # Home page
-│   │   └── globals.css         # Global styles with Tailwind
-│   └── components/             # Reusable React components
-│       ├── Header.tsx          # Navigation header
-│       └── Footer.tsx          # Site footer
-├── public/                     # Static assets
-├── tailwind.config.js          # Tailwind CSS configuration
-├── postcss.config.mjs          # PostCSS configuration
-└── package.json               # Dependencies and scripts
+src/
+├── app/                          # Next.js App Router
+│   ├── components/
+│   │   └── layout/
+│   │       ├── Header.tsx        # Header component
+│   │       ├── HeaderClient.tsx  # Client wrapper
+│   │       ├── Footer.tsx        # Footer component  
+│   │       └── FooterClient.tsx  # Client wrapper
+│   └── [locale]/                 # Internationalized routes
+├── lib/
+│   ├── header-config.ts          # 🎯 Header configuration
+│   └── footer-config.ts          # 🎯 Footer configuration
+└── styles/
+    └── globals.css               # Global styles
 ```
 
-## 🛠 Tech Stack
+## 🎨 Customization
 
-- **Framework**: Next.js 15 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS v4
-- **Fonts**: Geist Sans & Geist Mono
-- **Development**: Hot reload, ESLint
+This template is designed for easy customization:
 
-## 🎨 Design Features
+1. **Colors & Themes**: Edit Tailwind config and CSS variables
+2. **Content**: Update header/footer config files
+3. **Components**: Extend existing components or add new ones
+4. **Internationalization**: Add new locales in `messages/`
 
-### Responsive Design
-- Mobile-first approach
-- Tablet and desktop optimizations
-- Hamburger menu for mobile navigation
+## 📈 Production Ready
 
-### Accessibility
-- Semantic HTML structure
-- ARIA labels and roles
-- Keyboard navigation support
-- Focus indicators
-- High contrast ratios
+- ✅ **Zero build errors** - Passes all production checks
+- ✅ **TypeScript strict mode** - Full type safety
+- ✅ **ESLint clean** - No warnings or errors
+- ✅ **Accessibility tested** - WCAG 2.1 AA compliant
+- ✅ **Performance optimized** - Minimal bundle size
 
-### Dark Mode Support
-- Automatic dark/light mode detection
-- Consistent theming across all pages
-- Tailwind CSS dark: variants
+## Deploy on Vercel
 
-## 📄 Pages
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-### Home (`/`)
-- Hero section with company branding
-- Feature highlights
-- Latest game showcase (Aera)
-- Call-to-action buttons
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-### About (`/about`)
-- Company mission and values
-- Team member profiles
-- Company history and culture
-- Community engagement
+## 🎯 Quick Reference
 
-### Games (`/games`)
-- Featured game showcase (Aera)
-- Development progress tracking
-- Newsletter subscription
+### Common Tasks
 
-### Contact (`/contact`)
-- Contact form with validation
-- Company contact information
-- Business hours
-- FAQ section
-
-## 🧩 Components
-
-### Header Component
-- Responsive navigation bar
-- Active page highlighting
-- Mobile hamburger menu
-- Company logo and branding
-
-### Footer Component
-- Copyright information
-- Social media links
-- Additional navigation links
-- Business information
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
-
-### Installation
-```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
+**Change the logo:**
+```typescript
+// In src/lib/header-config.ts
+logo: {
+  text: "Your Company",
+  href: "/",
+}
 ```
 
-### Development
-The development server runs on `http://localhost:3000`
+**Add a navigation item:**
+```typescript
+// In src/lib/header-config.ts  
+navigation: [
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" }, // ← Add this
+]
+```
 
-## 🎯 Key Features
+**Update contact info:**
+```typescript
+// In src/lib/footer-config.ts
+contact: {
+  address: "Your Address",
+  phone: "+1 (555) 123-4567",
+  email: "hello@yourcompany.com",
+}
+```
 
-- ✅ **Tailwind CSS v4** - Latest version with modern syntax
-- ✅ **Responsive Design** - Mobile-first approach
-- ✅ **Dark Mode** - Automatic theme detection
-- ✅ **TypeScript** - Full type safety
-- ✅ **Accessibility** - WCAG compliant
-- ✅ **SEO Optimized** - Meta tags and semantic HTML
-- ✅ **Performance** - Next.js App Router optimization
+**Change footer links:**
+```typescript
+// In src/lib/footer-config.ts
+legalLinks: [
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" },
+]
+```
 
-## 📱 Pages Created
+## 🌍 Internationalization
 
-1. **Home Page** (`/`) - Hero, features, game showcase
-2. **About Page** (`/about`) - Mission, team, values
-3. **Games Page** (`/games`) - Aera showcase, development progress
-4. **Contact Page** (`/contact`) - Form, info, FAQ
-
-## 🧩 Components Created
-
-1. **Header** - Navigation with mobile menu
-2. **Footer** - Copyright and social links
-
-## 🔧 Configuration
-
-- ✅ Tailwind CSS v4 with `@tailwindcss/postcss`
-- ✅ PostCSS configuration
-- ✅ TypeScript strict mode
-- ✅ ESLint configuration
-- ✅ Next.js App Router
-
----
-
-© 2025 Paper Kite Games. All rights reserved.
+Built-in support for multiple languages:
+- Configure locales in `next.config.ts`
+- Add translations in `messages/` directory
+- Automatic locale detection and routing

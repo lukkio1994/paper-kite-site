@@ -1,0 +1,24 @@
+@import "./palette.css"; /* Import custom color palette */
+@import "tailwindcss";
+
+/* Add custom base styles if needed */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply bg-background text-foreground;
+  }
+
+  body {
+    @apply antialiased bg-background text-foreground;
+  }
+}
+
+/* Add component styles if needed */
+@layer components {
+  /* Custom component styles can go here */
+}
+
+/* Add utility styles if needed */
+@layer utilities {
+  /* Custom utility styles can go here */
+}
