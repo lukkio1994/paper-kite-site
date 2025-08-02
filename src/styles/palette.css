@@ -3,31 +3,27 @@
   /* 🎨 Light Palette    */
   /* =================== */
 
-/* Base structure */
---color-cstm-background: #f9fafb;          /* light neutral */
---color-cstm-surface: #ffffff;             /* white surface */
---color-cstm-overlay: rgba(0, 0, 0, 0.4);  /* modal overlay */
+  --color-cstm-background: #f5f2ee;              /* parchment tone, warm neutral */
+  --color-cstm-surface: #fffefc;                 /* slightly off-white, friendlier than pure white */
+  --color-cstm-overlay: rgba(0, 0, 0, 0.5);
 
---color-cstm-foreground: #1f2937;          /* dark gray text */
---color-cstm-muted: #6b7280;               /* muted gray */
---color-cstm-border: #e5e7eb;              /* light border */
+  --color-cstm-foreground: #1c1b19;              /* charcoal brown – readable but warm */
+  --color-cstm-muted: #837d75;                   /* faded brown-gray for supporting text */
+  --color-cstm-border: #d6cec5;                  /* gentle parchment edge */
 
-/* Functional colors */
---color-cstm-primary: #3b82f6;             /* mid-tone sky blue */
---color-cstm-primary-light: #60a5fa;       /* hover variant */
---color-cstm-primary-dark: #2563eb;        /* pressed variant */
+  --color-cstm-primary: #fca311;                 /* bold golden orange – evokes fun + danger */
+  --color-cstm-primary-light: #fdbb49;           /* hover/focus highlight */
+  --color-cstm-primary-dark: #d87b00;            /* pressed/focus tone */
 
---color-cstm-secondary: #a78bfa;           /* lilac / lavender */
---color-cstm-accent: #10b981;              /* mint (CTA, highlights) */
---color-cstm-success: #22c55e;             /* vibrant green */
---color-cstm-info: #0ea5e9;                /* sky blue info */
---color-cstm-warn: #f59e0b;                /* amber warn */
---color-cstm-error: #ef4444;               /* red error */
+  --color-cstm-secondary: #a259ff;               /* playful royal purple */
+  --color-cstm-accent: #3ddc84;                  /* minty green for CTA or action */
+  --color-cstm-success: #38b000;
+  --color-cstm-info: #2196f3;
+  --color-cstm-warn: #fcd34d;
+  --color-cstm-error: #ef4444;
 
-
-  /* System */
-  --color-cstm-white: #ffffff;               /* pure white for text/icons if needed */
-  --color-cstm-black: #000000;               /* pure black for overlays if needed */
+  --color-cstm-white: #ffffff;
+  --color-cstm-black: #000000;
 }
 
 [data-theme="dark"] {
@@ -35,38 +31,31 @@
   /* 🌑 Dark Palette      */
   /* =================== */
 
-/* Base structure */
---color-cstm-background: #1f2937;          /* charcoal background */
---color-cstm-surface: #273245;             /* dark blue-gray surface */
---color-cstm-overlay: rgba(0, 0, 0, 0.6);  /* darker modal overlay */
+  --color-cstm-background: #0e0b09;              /* rich near-black with warmth */
+  --color-cstm-surface: #1a1411;                 /* lifted brown-black */
+  --color-cstm-overlay: rgba(0, 0, 0, 0.7);
 
---color-cstm-foreground: #f3f4f6;          /* light text */
---color-cstm-muted: #9ca3af;               /* muted light gray */
---color-cstm-border: #374151;              /* dark border */
+  --color-cstm-foreground: #f5eadd;              /* soft bone-white */
+  --color-cstm-muted: #a0978b;                   /* dusty parchment */
+  --color-cstm-border: #3b302b;                  /* soft edge definition */
 
-/* Functional colors */
---color-cstm-primary: #60a5fa;             /* lighter sky blue for clarity */
---color-cstm-primary-light: #93c5fd;       /* hover variant */
---color-cstm-primary-dark: #3b82f6;        /* pressed variant */
+  --color-cstm-primary: #fca311;                 /* same orange – stays bold in dark mode */
+  --color-cstm-primary-light: #ffbe5c;
+  --color-cstm-primary-dark: #d87b00;
 
---color-cstm-secondary: #c4b5fd;           /* lighter lilac for visibility */
---color-cstm-accent: #34d399;              /* brighter mint for dark mode */
---color-cstm-success: #4ade80;             /* vibrant green */
---color-cstm-info: #38bdf8;                /* sky blue info */
---color-cstm-warn: #fbbf24;                /* lighter amber */
---color-cstm-error: #f87171;               /* lighter red */
+  --color-cstm-secondary: #c79aff;               /* brighter purple pop */
+  --color-cstm-accent: #57f2a7;                  /* bright green action buttons */
+  --color-cstm-success: #5cf573;
+  --color-cstm-info: #60a5fa;
+  --color-cstm-warn: #facc15;
+  --color-cstm-error: #f87171;
 
-  /* System */
-  --color-cstm-white: #ffffff;               /* pure white for highlights */
-  --color-cstm-black: #000000;               /* pure black for shadows */
+  --color-cstm-white: #ffffff;
+  --color-cstm-black: #000000;
 }
 
+/* Inline Theme Mapping */
 @theme inline {
-  /* ============================== */
-  /* 🪄 Theme Registration for Tailwind utilities */
-  /* ============================== */
-
-  /* Base structure */
   --color-background: var(--color-cstm-background);
   --color-surface: var(--color-cstm-surface);
   --color-overlay: var(--color-cstm-overlay);
@@ -75,7 +64,6 @@
   --color-muted: var(--color-cstm-muted);
   --color-border: var(--color-cstm-border);
 
-  /* Functional colors */
   --color-primary: var(--color-cstm-primary);
   --color-primary-light: var(--color-cstm-primary-light);
   --color-primary-dark: var(--color-cstm-primary-dark);
@@ -87,7 +75,6 @@
   --color-warn: var(--color-cstm-warn);
   --color-error: var(--color-cstm-error);
 
-  /* System */
   --color-white: var(--color-cstm-white);
   --color-black: var(--color-cstm-black);
 }

@@ -82,97 +82,23 @@ const config: HeaderConfig = {
   },
   navigation: [
     {
-      label: "Features",
-      href: "/features",
-      icon: undefined, // Add icon component if needed
-      subItems: [
-        {
-          label: "Analytics Dashboard",
-          href: "/features/analytics",
-          description: "Comprehensive data insights and reporting",
-        },
-        {
-          label: "Team Collaboration",
-          href: "/features/collaboration",
-          description: "Real-time team workspace and communication",
-        },
-        {
-          label: "API Integration",
-          href: "/features/api",
-          description: "Seamless third-party service connections",
-        },
-      ],
-    },
-    {
-      label: "Solutions",
-      href: "/solutions",
-      subItems: [
-        {
-          label: "For Startups",
-          href: "/solutions/startups",
-          description: "Scalable solutions for growing companies",
-        },
-        {
-          label: "Enterprise",
-          href: "/solutions/enterprise",
-          description: "Enterprise-grade security and compliance",
-        },
-        {
-          label: "Developers",
-          href: "/solutions/developers",
-          description: "Developer-first tools and documentation",
-        },
-      ],
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Resources",
-      href: "/resources",
-      subItems: [
-        {
-          label: "Documentation",
-          href: "/docs",
-          description: "Complete guides and API references",
-        },
-        {
-          label: "Blog",
-          href: "/blog",
-          description: "Latest updates and industry insights",
-        },
-        {
-          label: "Community",
-          href: "/community",
-          description: "Connect with other users and experts",
-        },
-        {
-          label: "Support",
-          href: "/support",
-          description: "Get help from our support team",
-        },
-      ],
+      label: "Home",
+      href: "/",
     },
     {
       label: "About",
       href: "/about",
     },
-  ],
-  actions: [
     {
-      label: "Sign In",
-      href: "/auth/signin",
-      variant: "ghost",
-      size: "sm",
+      label: "Games",
+      href: "/games",
     },
     {
-      label: "Get Started",
-      href: "/auth/signup",
-      variant: "primary",
-      size: "sm",
+      label: "Contact",
+      href: "/contact",
     },
   ],
+  actions: [],
   appearance: {
     variant: "elevated",
     background: "default",

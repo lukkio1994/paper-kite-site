@@ -71,12 +71,12 @@ export function useHeaderConfig() {
  */
 export function useFooterConfig() {
   const siteConfig = useSiteConfig();
-  
+
   // Convert the simplified sections structure to the format expected by the footer
-  const legalLinks = siteConfig.footer.sections.legal;
-  const productLinks = siteConfig.footer.sections.products;
-  const socialLinks = siteConfig.footer.social;
-  
+  const legalLinks = siteConfig.footer.sections.legal || [];
+  const productLinks = siteConfig.footer.sections.products || [];
+  const socialLinks = siteConfig.footer.social || [];
+
   return {
     contact: siteConfig.footer.contact,
     socialLinks,
