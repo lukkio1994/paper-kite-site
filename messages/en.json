@@ -31,7 +31,10 @@
       "accessibility": {
         "logoAriaLabel": "My Next.js App - Go to homepage",
         "mobileMenuAriaLabel": "Toggle main navigation menu",
-        "navigationAriaLabel": "Main navigation"
+        "navigationAriaLabel": "Main navigation",
+        "mainLandmarkLabel": "Main content area",
+        "searchFormLabel": "Search the site",
+        "languageSwitcherLabel": "Change language"
       }
     },
     "footer": {

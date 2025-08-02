@@ -1,11 +1,10 @@
 "use client";
 
 import { Header } from "./Header";
-import { useResolvedHeaderConfig } from '@/lib/config-resolver';
+import { useHeaderConfig } from '@/lib/site-config';
 
 export default function HeaderClient() {
-  const config = useResolvedHeaderConfig();
-
+  const config = useHeaderConfig();
   return (
     <Header
       logo={config.logo}

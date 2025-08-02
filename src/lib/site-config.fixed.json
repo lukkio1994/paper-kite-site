@@ -84,29 +84,7 @@
       "phone": "t('config.footer.contact.phone')",
       "email": "t('config.footer.contact.email')"
     },
-    "sections": {
-      "legal": [
-        {
-          "label": "t('config.footer.legal.privacy')",
-          "href": "/privacy"
-        },
-        {
-          "label": "t('config.footer.legal.terms')",
-          "href": "/terms"
-        }
-      ],
-      "products": [
-        {
-          "label": "t('config.footer.product.features')",
-          "href": "/features"
-        },
-        {
-          "label": "t('config.footer.product.pricing')",
-          "href": "/pricing"
-        }
-      ]
-    },
-    "social": [
+    "socialLinks": [
       {
         "platform": "t('config.footer.social.twitter')",
         "href": "https://twitter.com/yourcompany"
@@ -118,6 +96,26 @@
       {
         "platform": "t('config.footer.social.github')",
         "href": "https://github.com/yourcompany"
+      }
+    ],
+    "legalLinks": [
+      {
+        "label": "t('config.footer.legal.privacy')",
+        "href": "/privacy"
+      },
+      {
+        "label": "t('config.footer.legal.terms')",
+        "href": "/terms"
+      }
+    ],
+    "productLinks": [
+      {
+        "label": "t('config.footer.product.features')",
+        "href": "/features"
+      },
+      {
+        "label": "t('config.footer.product.pricing')",
+        "href": "/pricing"
       }
     ],
     "appearance": {
