@@ -1,55 +1,33 @@
 {
   "site": {
     "branding": {
-      "name": "t('config.header.logo.text')",
-      "logoText": "t('config.header.logo.text')",
+      "name": "Paper Kite Games",
+      "logoText": "Paper Kite Games",
       "logoHref": "/"
     }
   },
   "header": {
     "logo": {
-      "text": "t('config.header.logo.text')",
+      "text": "Paper Kite Games",
       "href": "/",
       "className": ""
     },
     "navigation": [
       {
-        "label": "t('config.header.navigation.features')",
-        "href": "/features",
-        "subItems": [
-          {
-            "label": "t('config.header.navigation.featuresAnalytics')",
-            "href": "/features/analytics",
-            "description": "t('config.header.navigation.featuresAnalyticsDescription')"
-          },
-          {
-            "label": "t('config.header.navigation.featuresCollaboration')",
-            "href": "/features/collaboration",
-            "description": "t('config.header.navigation.featuresCollaborationDescription')"
-          }
-        ]
+        "label": "Home",
+        "href": "/"
       },
       {
-        "label": "t('config.header.navigation.pricing')",
-        "href": "/pricing"
-      },
-      {
-        "label": "t('config.header.navigation.about')",
+        "label": "About",
         "href": "/about"
-      }
-    ],
-    "actions": [
-      {
-        "label": "t('config.header.actions.signIn')",
-        "href": "/auth/signin",
-        "variant": "ghost",
-        "size": "sm"
       },
       {
-        "label": "t('config.header.actions.getStarted')",
-        "href": "/auth/signup",
-        "variant": "primary",
-        "size": "sm"
+        "label": "Games",
+        "href": "/games"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact"
       }
     ],
     "appearance": {
@@ -79,11 +57,6 @@
     }
   },
   "footer": {
-    "contact": {
-      "address": "t('config.footer.contact.address')",
-      "phone": "t('config.footer.contact.phone')",
-      "email": "t('config.footer.contact.email')"
-    },
     "sections": {
       "legal": [
         {
@@ -108,16 +81,16 @@
     },
     "social": [
       {
-        "platform": "t('config.footer.social.twitter')",
-        "href": "https://twitter.com/yourcompany"
+        "platform": "Twitter",
+        "href": "https://twitter.com/paperkitegames"
       },
       {
-        "platform": "t('config.footer.social.linkedin')",
-        "href": "https://linkedin.com/company/yourcompany"
+        "platform": "LinkedIn",
+        "href": "https://linkedin.com/company/paperkitegames"
       },
       {
-        "platform": "t('config.footer.social.github')",
-        "href": "https://github.com/yourcompany"
+        "platform": "GitHub",
+        "href": "https://github.com/paperkitegames"
       }
     ],
     "appearance": {
@@ -140,6 +113,6 @@
       "backToTopAriaLabel": "t('config.footer.accessibility.backToTopAriaLabel')",
       "copyrightAriaLabel": "t('config.footer.accessibility.copyrightAriaLabel')"
     },
-    "copyright": "t('config.footer.copyright')"
+    "copyright": "© 2025 Paper Kite Games. All rights reserved."
   }
 }

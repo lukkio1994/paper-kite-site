@@ -1,0 +1,16 @@
+{
+  "actions": [
+    {
+      "label": "Sign In",
+      "href": "/auth/signin",
+      "variant": "ghost",
+      "size": "sm"
+    },
+    {
+      "label": "Get Started",
+      "href": "/auth/signup",
+      "variant": "primary",
+      "size": "sm"
+    }
+  ]
+}
