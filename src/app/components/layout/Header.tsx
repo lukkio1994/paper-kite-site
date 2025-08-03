@@ -312,14 +312,16 @@ const Header = forwardRef<HTMLElement, HeaderProps>(function Header(
           spacing="tight"
           className={getContainerClasses()}
         >
-          {/* Logo */}
-          {logo && <HeaderLogo config={logo} ariaLabel={a11yConfig.logoAriaLabel} />}
-
-          {/* Desktop Navigation - positioned based on navigationAlignment */}
+          {/* Nav stays centered/right, logo appears as first nav item */}
           <nav
             className={getNavigationClasses()}
             aria-label={a11yConfig.navigationAriaLabel}
           >
+            {logo && (
+              <span className="mr-6">
+                <HeaderLogo config={logo} ariaLabel={a11yConfig.logoAriaLabel} />
+              </span>
+            )}
             {navigation.map((item) => (
               <NavItem
                 key={item.href}
@@ -414,8 +416,43 @@ const HeaderLogo = forwardRef<HTMLAnchorElement, HeaderLogoProps>(function Heade
       className="object-contain"
     />
   ) : (
-    <span className={config.className || 'text-foreground text-lg font-bold'}>
-      {config.text}
+    <span
+      className={(config.className ? config.className + ' ' : '') + 'text-foreground text-lg font-bold group'}
+      style={{
+        fontFamily: '"Comic Neue", "Comic Sans MS", cursive, sans-serif',
+        lineHeight: 1.1,
+        display: 'inline-flex',
+        alignItems: 'center',
+        color: 'var(--color-cstm-primary-dark)'
+      }}
+    >
+      {/* Paper kite SVG icon with hover/pulse animation */}
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 22 26"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{ marginRight: 3, flexShrink: 0 }}
+        aria-hidden="true"
+        className="transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
+      >
+        <polygon points="11,2 20,11 11,20 2,11" stroke="currentColor" strokeWidth="2" fill="none" />
+        <line x1="11" y1="2" x2="11" y2="20" stroke="currentColor" strokeWidth="1.5" />
+        <line x1="2" y1="11" x2="20" y2="11" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M11 20 Q13 21 14 19" stroke="currentColor" strokeWidth="1.2" fill="none" />
+        {/* Kite tail */}
+        <path d="M14 19 Q17 23 11 25" stroke="currentColor" strokeWidth="1.1" fill="none" />
+        <circle cx="11" cy="25" r="0.7" fill="currentColor" />
+      </svg>
+      <span style={{ display: 'inline-block', textAlign: 'left' }}>
+        <span style={{ display: 'block' }}>
+          {config.text?.replace(/ ?Games$/, '')}
+        </span>
+        <span style={{ display: 'block', fontSize: '0.85em', letterSpacing: '0.05em', fontWeight: 700 }}>
+          Games
+        </span>
+      </span>
     </span>
   );
 
@@ -423,10 +460,11 @@ const HeaderLogo = forwardRef<HTMLAnchorElement, HeaderLogoProps>(function Heade
     <UILink
       ref={ref}
       href={config.href || '/'}
-      className="rounded-md focus:outline-none focus:ring-2 focus:ring-primary-light transition-colors hover:opacity-80"
+      className="rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--color-tinad-primary)] focus:ring-offset-2 focus:ring-offset-transparent transition-colors hover:opacity-80"
       aria-label={ariaLabel}
       variant="default"
       underline="none"
+      style={{ boxShadow: 'none' }}
     >
       {logoContent}
     </UILink>

@@ -22,8 +22,8 @@
         "href": "/about"
       },
       {
-        "label": "Games",
-        "href": "/games"
+        "label": "Press Kit",
+        "href": "/press-kit"
       },
       {
         "label": "Contact",
@@ -37,7 +37,7 @@
       "showBorder": true,
       "height": "default",
       "mobileMenuBreakpoint": "md",
-      "navigationAlignment": "right",
+      "navigationAlignment": "center",
       "className": ""
     },
     "mobile": {

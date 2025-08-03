@@ -1,12 +1,27 @@
 import type { ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
-import { getLocale } from 'next-intl/server'; // Localization integration
-import { ErrorBoundary } from "./components/utils/ErrorBoundary"; // Enhanced error handling
-import Analytics from "./components/utils/Analytics"; // Enhanced analytics
+import { getLocale } from 'next-intl/server';
+import { ErrorBoundary } from "./components/utils/ErrorBoundary";
+import Analytics from "./components/utils/Analytics";
 
-import "@/styles/globals.css"; // Global Tailwind + resets
+import { Bungee, Rubik } from 'next/font/google';
 
-// Base SEO metadata - page-specific SEO should be handled in individual pages
+const bungee = Bungee({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-display',
+  display: 'swap',
+});
+
+const rubik = Rubik({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-body',
+  display: 'swap',
+});
+
+import "@/styles/globals.css";
+
 export const metadata: Metadata = {
   title: {
     template: '%s | My Next.js App',
@@ -35,7 +50,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Responsive viewport configuration
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -49,43 +63,24 @@ export default async function RootLayout({
 }: {
   children: ReactNode;
 }) {
-  const locale = await getLocale(); // Get user's locale
+  const locale = await getLocale();
 
   return (
-    <html 
-      lang={locale} 
-      className="scroll-smooth" 
-      suppressHydrationWarning={true} // REQUIRED: Prevents theme hydration mismatch
+    <html
+      lang={locale}
+      className={`scroll-smooth ${bungee.variable} ${rubik.variable}`}
+      suppressHydrationWarning={true}
     >
       <head>
-        {/* 
-          CRITICAL THEME SCRIPT - DO NOT MODIFY OR MOVE
-          
-          Requirements:
-          1. Must be FIRST script in <head>
-          2. Must be blocking (no async/defer) 
-          3. Must run before React hydration
-          4. suppressHydrationWarning={true} must remain on <html>
-          
-          Purpose: Prevents theme flash and hydration mismatches
-          Source: This script is maintained in /public/theme-script.js
-          
-          ⚠️  MAINTENANCE NOTE:
-          - Any changes to this script must also be updated in /public/theme-script.js
-          - Test hydration thoroughly after any modifications
-          - Keep both versions in sync
-        */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
                 'use strict';
-                
                 function setTheme() {
                   try {
-                    var isDark = window.matchMedia && 
-                                 window.matchMedia('(prefers-color-scheme: dark)').matches;
-                    
+                    var isDark = window.matchMedia &&
+                      window.matchMedia('(prefers-color-scheme: dark)').matches;
                     if (isDark) {
                       document.documentElement.setAttribute('data-theme', 'dark');
                     } else {
@@ -95,15 +90,11 @@ export default async function RootLayout({
                     console.warn('Theme detection failed:', error);
                   }
                 }
-                
-                // Set initial theme immediately to prevent flash
                 setTheme();
-                
-                // Listen for system theme changes and update live
                 if (window.matchMedia) {
                   try {
                     window.matchMedia('(prefers-color-scheme: dark)')
-                          .addEventListener('change', setTheme);
+                      .addEventListener('change', setTheme);
                   } catch (error) {
                     console.warn('Theme change listener failed:', error);
                   }
@@ -125,9 +116,8 @@ export default async function RootLayout({
           transition-colors duration-300
         `}
       >
-
         <main className="flex-1 w-full">
-          <ErrorBoundary 
+          <ErrorBoundary
             errorTitle="Something went wrong"
             errorMessage="An unexpected error occurred. Please try again or contact support if the problem persists."
             retryButtonText="Try again"
@@ -136,13 +126,12 @@ export default async function RootLayout({
           </ErrorBoundary>
         </main>
 
-        {/* Enhanced Analytics with privacy compliance */}
-        <Analytics 
+        <Analytics
           gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-XXXXXXXXXX"}
           gtagConfig={{
             anonymize_ip: true,
             allow_google_signals: false,
-            allow_ad_personalization_signals: false
+            allow_ad_personalization_signals: false,
           }}
           enableGoogleAnalytics={process.env.NODE_ENV === 'production'}
           enableCustomTracking={false}

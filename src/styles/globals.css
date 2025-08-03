@@ -1,24 +1,57 @@
-@import "./palette.css"; /* Import custom color palette */
+/* ============================ */
+/* 🌐 Font Imports             */
+/* ============================ */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rubik:wght@400;500;700&display=swap');
+
+/* ============================ */
+/* 🎨 Custom Palette + Tailwind */
+/* ============================ */
+@import "./palette.css"; /* Custom color palette */
+@import "./tinadPalette.css"; /* TINAD theme palette */
 @import "tailwindcss";
 
-/* Add custom base styles if needed */
+/* ============================ */
+/* 🌍 Global Font Variables     */
+/* ============================ */
+:root {
+  --font-body: 'Rubik', sans-serif;
+  --font-display: 'Bungee', cursive;
+}
+
+/* ============================ */
+/* 🔤 Base Element Styles       */
+/* ============================ */
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-family: var(--font-body);
     @apply bg-background text-foreground;
   }
 
   body {
+    font-family: var(--font-body);
     @apply antialiased bg-background text-foreground;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  .diagonal-clip {
+  clip-path: polygon(0 0, 100% 6%, 100% 100%, 0% 94%);
+}
 }
 
-/* Add component styles if needed */
+/* ============================ */
+/* 🧩 Components Layer          */
+/* ============================ */
 @layer components {
-  /* Custom component styles can go here */
+  /* You can define custom reusable component classes here */
 }
 
-/* Add utility styles if needed */
+/* ============================ */
+/* 🧰 Utility Extensions         */
+/* ============================ */
 @layer utilities {
-  /* Custom utility styles can go here */
+  /* Custom utility styles if needed */
 }

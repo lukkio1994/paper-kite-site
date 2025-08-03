@@ -1,0 +1,50 @@
+:root {
+  /* 🧊 TINAD Theme - Blue & Magic Purple (Light Mode Only) */
+  --tinad-background: #edf4ff;         /* soft sky paper */
+  --tinad-surface: #f6f0ff;            /* pale lavender parchment */
+  --tinad-overlay: rgba(0, 0, 0, 0.04);
+
+  --tinad-foreground: #1b1b3a;         /* ink navy */
+  --tinad-muted: #6e6a93;              /* dusty lilac */
+  --tinad-border: #d0d6e5;             /* cloudy border */
+
+  --tinad-primary: #6a5acd;            /* sorcerer violet */
+  --tinad-primary-light: #a89df5;      /* glowing lavender */
+  --tinad-primary-dark: #483d8b;       /* deep arcane indigo */
+
+  --tinad-secondary: #3c82f6;          /* enchanted blue */
+  --tinad-accent: #38bdf8;             /* icy spell pop */
+  --tinad-success: #10b981;            /* bright green success */
+  --tinad-info: #0ea5e9;
+  --tinad-warn: #facc15;
+  --tinad-error: #ef4444;
+
+  --tinad-white: #ffffff;
+  --tinad-black: #000000;
+}
+
+
+/* Direct theme variable mapping for TINAD palette */
+:root {
+  --color-tinad-background: var(--tinad-background);
+  --color-tinad-surface: var(--tinad-surface);
+  --color-tinad-overlay: var(--tinad-overlay);
+
+  --color-tinad-foreground: var(--tinad-foreground);
+  --color-tinad-muted: var(--tinad-muted);
+  --color-tinad-border: var(--tinad-border);
+
+  --color-tinad-primary: var(--tinad-primary);
+  --color-tinad-primary-light: var(--tinad-primary-light);
+  --color-tinad-primary-dark: var(--tinad-primary-dark);
+
+  --color-tinad-secondary: var(--tinad-secondary);
+  --color-tinad-accent: var(--tinad-accent);
+  --color-tinad-success: var(--tinad-success);
+  --color-tinad-info: var(--tinad-info);
+  --color-tinad-warn: var(--tinad-warn);
+  --color-tinad-error: var(--tinad-error);
+
+  --color-tinad-white: var(--tinad-white);
+  --color-tinad-black: var(--tinad-black);
+}

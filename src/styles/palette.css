@@ -1,25 +1,21 @@
 :root {
-  /* =================== */
-  /* 🎨 Light Palette    */
-  /* =================== */
+  --color-cstm-background: #e6f2fb;         /* soft sky blue */
+  --color-cstm-surface: #ffffff;            /* clean paper white */
+  --color-cstm-overlay: rgba(0, 0, 0, 0.05);
 
-  --color-cstm-background: #f5f2ee;              /* parchment tone, warm neutral */
-  --color-cstm-surface: #fffefc;                 /* slightly off-white, friendlier than pure white */
-  --color-cstm-overlay: rgba(0, 0, 0, 0.5);
+  --color-cstm-foreground: #143a52;         /* deep sky navy */
+  --color-cstm-muted: #6b91a4;              /* cool muted text */
+  --color-cstm-border: #bcd9ea;
 
-  --color-cstm-foreground: #1c1b19;              /* charcoal brown – readable but warm */
-  --color-cstm-muted: #837d75;                   /* faded brown-gray for supporting text */
-  --color-cstm-border: #d6cec5;                  /* gentle parchment edge */
+  --color-cstm-primary: #4aa0e6;            /* kite blue */
+  --color-cstm-primary-light: #8acdf1;      
+  --color-cstm-primary-dark: #1c6ca1;
 
-  --color-cstm-primary: #fca311;                 /* bold golden orange – evokes fun + danger */
-  --color-cstm-primary-light: #fdbb49;           /* hover/focus highlight */
-  --color-cstm-primary-dark: #d87b00;            /* pressed/focus tone */
-
-  --color-cstm-secondary: #a259ff;               /* playful royal purple */
-  --color-cstm-accent: #3ddc84;                  /* minty green for CTA or action */
-  --color-cstm-success: #38b000;
-  --color-cstm-info: #2196f3;
-  --color-cstm-warn: #fcd34d;
+  --color-cstm-secondary: #4ec38a;          /* leafy green */
+  --color-cstm-accent: #faae42;             /* golden ribbon pop */
+  --color-cstm-success: #22c55e;
+  --color-cstm-info: #38bdf8;
+  --color-cstm-warn: #f59e0b;
   --color-cstm-error: #ef4444;
 
   --color-cstm-white: #ffffff;
@@ -27,25 +23,21 @@
 }
 
 [data-theme="dark"] {
-  /* =================== */
-  /* 🌑 Dark Palette      */
-  /* =================== */
+  --color-cstm-background: #1a2238;         /* twilight navy */
+  --color-cstm-surface: #2c3046;            /* elevated soft violet */
+  --color-cstm-overlay: rgba(0, 0, 0, 0.6);
 
-  --color-cstm-background: #0e0b09;              /* rich near-black with warmth */
-  --color-cstm-surface: #1a1411;                 /* lifted brown-black */
-  --color-cstm-overlay: rgba(0, 0, 0, 0.7);
+  --color-cstm-foreground: #f1f2f7;         /* pale paper white */
+  --color-cstm-muted: #a5a8c5;              /* soft lavender-gray */
+  --color-cstm-border: #414866;
 
-  --color-cstm-foreground: #f5eadd;              /* soft bone-white */
-  --color-cstm-muted: #a0978b;                   /* dusty parchment */
-  --color-cstm-border: #3b302b;                  /* soft edge definition */
+  --color-cstm-primary: #f294a0;            /* sunset pink */
+  --color-cstm-primary-light: #fab9c3;
+  --color-cstm-primary-dark: #db6a77;
 
-  --color-cstm-primary: #fca311;                 /* same orange – stays bold in dark mode */
-  --color-cstm-primary-light: #ffbe5c;
-  --color-cstm-primary-dark: #d87b00;
-
-  --color-cstm-secondary: #c79aff;               /* brighter purple pop */
-  --color-cstm-accent: #57f2a7;                  /* bright green action buttons */
-  --color-cstm-success: #5cf573;
+  --color-cstm-secondary: #faae42;          /* kite string gold */
+  --color-cstm-accent: #8acdf1;             /* sky blue highlight */
+  --color-cstm-success: #34d399;
   --color-cstm-info: #60a5fa;
   --color-cstm-warn: #facc15;
   --color-cstm-error: #f87171;
@@ -54,7 +46,6 @@
   --color-cstm-black: #000000;
 }
 
-/* Inline Theme Mapping */
 @theme inline {
   --color-background: var(--color-cstm-background);
   --color-surface: var(--color-cstm-surface);
