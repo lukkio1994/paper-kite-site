@@ -10,7 +10,7 @@ function PanelContent() {
 
       {/* 📨 Indie-style Mailing List Button */}
       <a
-        href="#"
+        href="/maillist"
         className="font-semibold py-3 px-6 rounded-xl shadow-md text-center text-lg transition w-full sm:w-auto
           bg-[var(--color-tinad-primary)] text-[var(--color-tinad-white)]
           hover:bg-[var(--color-tinad-primary-light)]
@@ -21,7 +21,7 @@ function PanelContent() {
 
       {/* 🎥 Content Creator Button (uses same style as mailing list) */}
       <a
-        href="#"
+        href="/contentcreators"
         className="font-semibold py-3 px-6 rounded-xl shadow-md text-center text-lg transition w-full sm:w-auto
           bg-[var(--color-tinad-primary)] text-[var(--color-tinad-white)]
           hover:bg-[var(--color-tinad-primary-light)]
@@ -75,7 +75,7 @@ export default function HomePage() {
         {/* 🖼️ Capsule image centered on top of gradient */}
         <div className="relative w-full max-w-screen-xl aspect-[1232/706] z-10">
           <Image
-            src="/images/games/Tinad/store_capsule_main.png"
+            src="/images/games/tinad/store_capsule_main.png"
             alt="Key art from This Is Not A Dungeon"
             fill
             className="object-contain object-center"

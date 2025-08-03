@@ -1,27 +1,28 @@
 :root {
-  /* 🧊 TINAD Theme - Blue & Magic Purple (Light Mode Only) */
-  --tinad-background: #edf4ff;         /* soft sky paper */
-  --tinad-surface: #f6f0ff;            /* pale lavender parchment */
-  --tinad-overlay: rgba(0, 0, 0, 0.04);
+  /* ✨ TINAD Theme – Arcane Blue & Magic Purple (Light Mode Only) */
+  --tinad-background: #e9e6f2;         /* twilight vellum */
+  --tinad-surface: #e4e0f5;            /* soft mystical parchment */
+  --tinad-overlay: rgba(20, 16, 44, 0.05); /* dark veil */
 
-  --tinad-foreground: #1b1b3a;         /* ink navy */
-  --tinad-muted: #6e6a93;              /* dusty lilac */
-  --tinad-border: #d0d6e5;             /* cloudy border */
+  --tinad-foreground: #1c1538;         /* midnight ink */
+  --tinad-muted: #7a7196;              /* dusty spell text */
+  --tinad-border: #c4b9e0;             /* misty lavender edge */
 
-  --tinad-primary: #6a5acd;            /* sorcerer violet */
-  --tinad-primary-light: #a89df5;      /* glowing lavender */
-  --tinad-primary-dark: #483d8b;       /* deep arcane indigo */
+  --tinad-primary: #7c3aed;            /* arcane purple */
+  --tinad-primary-light: #a78bfa;      /* luminous amethyst */
+  --tinad-primary-dark: #5b21b6;       /* deep void violet */
 
-  --tinad-secondary: #3c82f6;          /* enchanted blue */
-  --tinad-accent: #38bdf8;             /* icy spell pop */
-  --tinad-success: #10b981;            /* bright green success */
-  --tinad-info: #0ea5e9;
-  --tinad-warn: #facc15;
-  --tinad-error: #ef4444;
+  --tinad-secondary: #2563eb;          /* focused mana blue */
+  --tinad-accent: #60a5fa;             /* frost burst */
+  --tinad-success: #16a34a;            /* elixir green */
+  --tinad-info: #38bdf8;
+  --tinad-warn: #fbbf24;               /* glowing trap glyph */
+  --tinad-error: #dc2626;              /* blood pact */
 
   --tinad-white: #ffffff;
   --tinad-black: #000000;
 }
+
 
 
 /* Direct theme variable mapping for TINAD palette */
