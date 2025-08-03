@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 // 🔁 Shared content for both floating and sticky versions
@@ -9,7 +10,7 @@ function PanelContent() {
     <div className="flex flex-col sm:flex-row justify-center items-center gap-4 py-3 px-4 sm:px-6 lg:px-12 max-w-3xl mx-auto">
 
       {/* 📨 Indie-style Mailing List Button */}
-      <a
+      <Link
         href="/maillist"
         className="font-semibold py-3 px-6 rounded-xl shadow-md text-center text-lg transition w-full sm:w-auto
           bg-[var(--color-tinad-primary)] text-[var(--color-tinad-white)]
@@ -17,10 +18,10 @@ function PanelContent() {
           focus:outline-none focus:ring-2 focus:ring-[var(--color-tinad-primary)]"
       >
         Get Dev Updates
-      </a>
+      </Link>
 
       {/* 🎥 Content Creator Button (uses same style as mailing list) */}
-      <a
+      <Link
         href="/contentcreators"
         className="font-semibold py-3 px-6 rounded-xl shadow-md text-center text-lg transition w-full sm:w-auto
           bg-[var(--color-tinad-primary)] text-[var(--color-tinad-white)]
@@ -28,7 +29,7 @@ function PanelContent() {
           focus:outline-none focus:ring-2 focus:ring-[var(--color-tinad-primary)]"
       >
         For Content Creators
-      </a>
+      </Link>
 
       {/* 🕹️ Steam Wishlist Button */}
       <a href="#" className="block w-full sm:w-auto">
@@ -57,10 +58,10 @@ export default function HomePage() {
       ([entry]) => setIsSticky(!entry.isIntersecting),
       { threshold: 0 }
     );
-
-    if (sentinelRef.current) observer.observe(sentinelRef.current);
+    const current = sentinelRef.current;
+    if (current) observer.observe(current);
     return () => {
-      if (sentinelRef.current) observer.unobserve(sentinelRef.current);
+      if (current) observer.unobserve(current);
     };
   }, []);
 
