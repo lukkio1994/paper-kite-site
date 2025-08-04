@@ -93,10 +93,6 @@ const config: HeaderConfig = {
       label: "Games",
       href: "/games",
     },
-    {
-      label: "Contact",
-      href: "/contact",
-    },
   ],
   actions: [],
   appearance: {

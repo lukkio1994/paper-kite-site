@@ -8,7 +8,6 @@ import { useEffect, useRef, useState } from "react";
 function PanelContent() {
   return (
     <div className="flex flex-col sm:flex-row justify-center items-center gap-4 py-3 px-4 sm:px-6 lg:px-12 max-w-3xl mx-auto">
-
       {/* 📨 Indie-style Mailing List Button */}
       <Link
         href="/maillist"
@@ -48,7 +47,6 @@ function PanelContent() {
   );
 }
 
-
 export default function HomePage() {
   const sentinelRef = useRef(null);
   const [isSticky, setIsSticky] = useState(false);
@@ -67,7 +65,6 @@ export default function HomePage() {
 
   return (
     <main className="w-full bg-[var(--color-tinad-background)] text-[var(--color-tinad-foreground)] overflow-x-hidden font-body">
-
       {/* 🎮 HERO SECTION */}
       <section
         className="relative w-full flex flex-col items-center justify-start overflow-hidden bg-gradient-to-b from-[var(--color-tinad-background)] to-[var(--color-tinad-primary-dark)] text-[var(--color-tinad-surface)]"

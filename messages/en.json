@@ -44,9 +44,10 @@
         "email": "contact@mynextjsapp.com"
       },
       "social": {
-        "twitter": "Twitter",
-        "linkedin": "LinkedIn",
-        "github": "GitHub"
+        "x": "X",
+        "ig": "IG",
+        "discord": "Discord",
+        "youtube": "YouTube"
       },
       "legal": {
         "privacy": "Privacy Policy",

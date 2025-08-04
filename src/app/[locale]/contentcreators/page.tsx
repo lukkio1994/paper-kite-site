@@ -86,7 +86,7 @@ export default function AboutPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">Want to connect or collaborate?</h2>
           <p className="text-lg text-muted mb-6">We love meeting fellow devs, artists, and players. Reach out to us on social or email!</p>
           <a
-            href="mailto:contact@paperkitegames.com"
+            href="mailto:paperkitegames@gmail.com"
             className="bg-primary text-onAccent font-bold py-3 px-6 rounded-xl shadow text-lg transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary"
             aria-label="Contact Paper Kite Games"
           >

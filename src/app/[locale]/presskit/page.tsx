@@ -1,94 +1,105 @@
 'use client';
 
-import Image from 'next/image';
 
-export default function AboutPage() {
+import Link from 'next/link';
+
+export default function PressKitPage() {
   return (
     <main className="w-full bg-background text-foreground overflow-x-hidden">
-      {/* 🏢 ABOUT HERO SECTION */}
-      <section
-        className="w-full py-10 px-4 sm:px-6 lg:px-12 bg-background"
-        aria-label="About Paper Kite Games"
-      >
+      {/* 🎮 GAME OVERVIEW SECTION */}
+      <section className="w-full py-10 px-4 sm:px-6 lg:px-12 bg-background" aria-label="Game Overview">
         <div className="max-w-6xl mx-auto rounded-xl overflow-hidden border border-border shadow-lg bg-surface flex flex-col md:flex-row items-center gap-8 p-8">
-          <div className="relative w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
-            <Image
-              src="/images/logo.png"
-              alt="Paper Kite Games logo"
-              fill
-              className="object-contain"
-              priority
-            />
+          <div className="flex items-center justify-center w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
+            {/* SVG kite logo (same as header/footer) */}
+            <svg width="100%" height="100%" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg" style={{maxWidth:'100%',maxHeight:'100%'}} aria-label="Paper Kite Games logo">
+              <polygon points="11,2 20,11 11,20 2,11" stroke="var(--color-cstm-primary)" strokeWidth="2" fill="none" />
+              <line x1="11" y1="2" x2="11" y2="20" stroke="var(--color-cstm-primary)" strokeWidth="1.5" />
+              <line x1="2" y1="11" x2="20" y2="11" stroke="var(--color-cstm-primary)" strokeWidth="1.5" />
+              {/* Improved tail: smoother, more natural curve */}
+              <path d="M11 20 Q12 22 10 23 Q8 24 11 25" stroke="var(--color-cstm-primary)" strokeWidth="1.2" fill="none" />
+              <circle cx="11" cy="25" r="0.7" fill="var(--color-cstm-primary)" />
+            </svg>
           </div>
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-4">
-              About Paper Kite Games
+              Press Kit – Paper Kite Games
             </h1>
             <p className="text-lg text-muted mb-4">
-              We are an independent game studio passionate about crafting unique, memorable, and meaningful experiences. Our small but mighty team brings together artists, developers, and storytellers from around the world.
+              Paper Kite Games is an independent studio crafting meaningful interactive experiences. Our upcoming title blends strategic dungeon defense with satirical fantasy in a fresh twist on tower defense gameplay.
             </p>
             <p className="text-lg text-muted">
-              At Paper Kite Games, we believe in creative freedom, player-first design, and the magic of interactive storytelling. We build worlds that invite exploration, challenge expectations, and celebrate the joy of play.
+              Below you’ll find everything you need to cover the game: descriptions, screenshots, logos, team info, and contact details. Feel free to reach out!
             </p>
           </div>
         </div>
       </section>
 
-      {/* 👥 TEAM SECTION */}
-      <section className="w-full bg-surface text-foreground py-20 px-4 border-t border-border">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Meet the Team</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {/* Example team members - replace with real data */}
-            <div className="flex flex-col items-center">
-              <Image src="/images/team/alex.png" alt="Alex - Creative Director" width={96} height={96} className="rounded-full mb-2" />
-              <div className="font-semibold">Alex</div>
-              <div className="text-sm text-muted">Creative Director</div>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image src="/images/team/jordan.png" alt="Jordan - Lead Developer" width={96} height={96} className="rounded-full mb-2" />
-              <div className="font-semibold">Jordan</div>
-              <div className="text-sm text-muted">Lead Developer</div>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image src="/images/team/sam.png" alt="Sam - Art & Animation" width={96} height={96} className="rounded-full mb-2" />
-              <div className="font-semibold">Sam</div>
-              <div className="text-sm text-muted">Art & Animation</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 🌱 STUDIO VALUES SECTION */}
-      <section className="w-full bg-background text-foreground py-20 px-4 border-t border-border">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Our Values</h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-lg text-muted">
-            <li>
-              <span className="font-bold text-primary">Creativity:</span> We encourage bold ideas and original thinking in everything we do.
-            </li>
-            <li>
-              <span className="font-bold text-primary">Community:</span> We build games for and with our players, valuing feedback and collaboration.
-            </li>
-            <li>
-              <span className="font-bold text-primary">Diversity:</span> Our team and our games reflect a wide range of backgrounds, stories, and perspectives.
-            </li>
-            <li>
-              <span className="font-bold text-primary">Quality:</span> We obsess over details and polish, delivering games we’re proud of.
-            </li>
+      {/* 📝 FAST FACTS SECTION */}
+      <section className="w-full bg-surface text-foreground py-16 px-4 border-t border-border">
+        <div className="max-w-4xl mx-auto text-left space-y-6">
+          <h2 className="text-3xl font-bold text-primary mb-4 text-center">Fast Facts</h2>
+          <ul className="grid sm:grid-cols-2 gap-6 text-lg text-muted">
+            <li><strong className="text-primary">Game Title:</strong> This Is Not A Dungeon (TINAD)</li>
+            <li><strong className="text-primary">Developer:</strong> Paper Kite Games</li>
+            <li><strong className="text-primary">Genre:</strong> Strategy / Tower Defense / Satire</li>
+            <li><strong className="text-primary">Platform:</strong> PC (Steam)</li>
+            <li><strong className="text-primary">Release Date:</strong> TBD (Demo Available Q4 2025)</li>
+            <li><strong className="text-primary">Price:</strong> TBD</li>
+            <li><strong className="text-primary">Press Contact:</strong> paperkitegames@gmail.com</li>
+            <li><strong className="text-primary">Website:</strong> paperkite.games</li>
           </ul>
         </div>
       </section>
 
-      {/* 🚀 CALL TO ACTION SECTION */}
-      <section className="w-full bg-surface text-foreground py-16 px-4 border-t border-border">
+      {/* 🖼️ MEDIA ASSETS SECTION */}
+      <section className="w-full bg-background text-foreground py-20 px-4 border-t border-border">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Media Kit</h2>
+          <p className="text-lg text-muted mb-6">
+            All logos, screenshots, and trailer clips are free to use for press and content creators.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+            <a href="/assets/presskit/logo.png" download className="underline text-primary hover:text-primary-light">
+              🖼️ Download Logo
+            </a>
+            <a href="/assets/presskit/screenshots.zip" download className="underline text-primary hover:text-primary-light">
+              🖼️ Download Screenshots
+            </a>
+            <a href="https://youtu.be/yourtrailerlink" target="_blank" rel="noopener" className="underline text-primary hover:text-primary-light">
+              🎬 Watch Trailer
+            </a>
+            <a href="/assets/presskit/presskit.zip" download className="underline text-primary hover:text-primary-light">
+              📦 Download Full Press Kit (.zip)
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* 🏢 STUDIO INFO (SHORT) */}
+      <section className="w-full bg-surface text-foreground py-12 px-4 border-t border-border">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">About Paper Kite Games</h2>
+          <p className="text-lg text-muted mb-6">
+            We’re a small indie studio focused on narrative-rich, expressive strategy games with humor and heart.
+            <Link
+              href="/about"
+              className="text-primary underline hover:text-primary-light font-medium"
+            >
+              👉 Read our full story
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* 📩 CONTACT SECTION */}
+      <section className="w-full bg-background text-foreground py-16 px-4 border-t border-border">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">Want to connect or collaborate?</h2>
-          <p className="text-lg text-muted mb-6">We love meeting fellow devs, artists, and players. Reach out to us on social or email!</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">Need anything else?</h2>
+          <p className="text-lg text-muted mb-6">We’re happy to help with interviews, codes, or exclusive content. Just reach out!</p>
           <a
-            href="mailto:contact@paperkitegames.com"
+            href="mailto:paperkitegames@gmail.com"
             className="bg-primary text-onAccent font-bold py-3 px-6 rounded-xl shadow text-lg transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary"
-            aria-label="Contact Paper Kite Games"
+            aria-label="Email Paper Kite Games"
           >
             📧 Contact Us
           </a>

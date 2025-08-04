@@ -24,11 +24,6 @@
       {
         "label": "Press Kit",
         "href": "/presskit"
-      },
-      
-      {
-        "label": "Contact",
-        "href": "/contact"
       }
     ],
     "appearance": {
@@ -82,16 +77,20 @@
     },
     "social": [
       {
-        "platform": "Twitter",
-        "href": "https://twitter.com/paperkitegames"
+        "platform": "X",
+        "href": "https://x.com/PaperKiteGames"
       },
       {
-        "platform": "LinkedIn",
-        "href": "https://linkedin.com/company/paperkitegames"
+        "platform": "IG",
+        "href": "https://www.instagram.com/paperkitegames"
       },
       {
-        "platform": "GitHub",
-        "href": "https://github.com/paperkitegames"
+        "platform": "Discord",
+        "href": "https://discord.gg/eFgfb6vHwG"
+      },
+      {
+        "platform": "YouTube",
+        "href": "https://www.youtube.com/@PaperKiteGames"
       }
     ],
     "appearance": {

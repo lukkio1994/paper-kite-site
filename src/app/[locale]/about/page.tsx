@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 
 export default function AboutPage() {
   return (
@@ -11,15 +10,7 @@ export default function AboutPage() {
         aria-label="About Paper Kite Games"
       >
         <div className="max-w-6xl mx-auto rounded-xl overflow-hidden border border-border shadow-lg bg-surface flex flex-col md:flex-row items-center gap-8 p-8">
-          <div className="relative w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
-            <Image
-              src="/images/logo.png"
-              alt="Paper Kite Games logo"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
+
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-4">
               About Paper Kite Games
@@ -39,21 +30,20 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Meet the Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {/* Example team members - replace with real data */}
             <div className="flex flex-col items-center">
-              <Image src="/images/team/alex.png" alt="Alex - Creative Director" width={96} height={96} className="rounded-full mb-2" />
-              <div className="font-semibold">Alex</div>
-              <div className="text-sm text-muted">Creative Director</div>
+              {/* <Image src="/images/team/david.png" alt="David Leon - Senior Software Developer" width={96} height={96} className="rounded-full mb-2" /> */}
+              <div className="font-semibold">David Leon</div>
+              <div className="text-sm text-muted">Senior Software Developer</div>
             </div>
             <div className="flex flex-col items-center">
-              <Image src="/images/team/jordan.png" alt="Jordan - Lead Developer" width={96} height={96} className="rounded-full mb-2" />
-              <div className="font-semibold">Jordan</div>
+              {/* <Image src="/images/team/luis.png" alt="Luis Sequeira - Lead Developer" width={96} height={96} className="rounded-full mb-2" /> */}
+              <div className="font-semibold">Luis Sequeira</div>
               <div className="text-sm text-muted">Lead Developer</div>
             </div>
             <div className="flex flex-col items-center">
-              <Image src="/images/team/sam.png" alt="Sam - Art & Animation" width={96} height={96} className="rounded-full mb-2" />
-              <div className="font-semibold">Sam</div>
-              <div className="text-sm text-muted">Art & Animation</div>
+              {/* <Image src="/images/team/carlos.png" alt="Carlos Sequeira - UX/UX Designer" width={96} height={96} className="rounded-full mb-2" /> */}
+              <div className="font-semibold">Carlos Sequeira</div>
+              <div className="text-sm text-muted">UX/UX Designer</div>
             </div>
           </div>
         </div>
@@ -86,7 +76,7 @@ export default function AboutPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">Want to connect or collaborate?</h2>
           <p className="text-lg text-muted mb-6">We love meeting fellow devs, artists, and players. Reach out to us on social or email!</p>
           <a
-            href="mailto:contact@paperkitegames.com"
+            href="mailto:paperkitegames@gmail.com"
             className="bg-primary text-onAccent font-bold py-3 px-6 rounded-xl shadow text-lg transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary"
             aria-label="Contact Paper Kite Games"
           >

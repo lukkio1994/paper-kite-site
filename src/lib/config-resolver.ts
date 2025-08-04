@@ -251,20 +251,24 @@ const footerConfigFactory = (getKey: (key: string, options?: { defaultValue?: st
   contact: {
     address: getKey('contact.address', { defaultValue: '123 Main Street, City, State 12345' }),
     phone: getKey('contact.phone', { defaultValue: '+1 (555) 123-4567' }),
-    email: getKey('contact.email', { defaultValue: 'contact@example.com' })
+    email: getKey('contact.email', { defaultValue: 'paperkitegames@gmail.com' })
   } as ContactInfo,
   socialLinks: [
     {
-      platform: getKey('social.twitter', { defaultValue: 'Twitter' }),
-      href: "https://twitter.com/yourcompany"
+      platform: getKey('social.x', { defaultValue: 'X' }),
+      href: "https://x.com/PaperKiteGames"
     },
     {
-      platform: getKey('social.linkedin', { defaultValue: 'LinkedIn' }),
-      href: "https://linkedin.com/company/yourcompany"
+      platform: getKey('social.ig', { defaultValue: 'IG' }),
+      href: "https://www.instagram.com/paperkitegames"
     },
     {
-      platform: getKey('social.github', { defaultValue: 'GitHub' }),
-      href: "https://github.com/yourcompany"
+      platform: getKey('social.discord', { defaultValue: 'Discord' }),
+      href: "https://discord.gg/eFgfb6vHwG"
+    },
+    {
+      platform: getKey('social.youtube', { defaultValue: 'YouTube' }),
+      href: "https://www.youtube.com/@PaperKiteGames"
     }
   ] as SocialLinkItem[],
   legalLinks: [

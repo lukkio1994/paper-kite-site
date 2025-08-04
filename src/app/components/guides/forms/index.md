@@ -673,7 +673,7 @@ function AdvancedForm() {
           type="email"
           value={formData.email}
           onChange={(e) => setFormData({...formData, email: e.target.value})}
-          placeholder="john@example.com"
+          placeholder="paperkitegames@gmail.com"
         />
       </FormField>
       

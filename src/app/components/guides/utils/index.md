@@ -518,7 +518,7 @@ import { ErrorBoundary } from '@/app/components/utils';
   errorTitle="Something went wrong"
   errorMessage="We're working to fix this issue. Please try again."
   supportContact={{
-    email: "support@example.com",
+    email: "paperkitegames@gmail.com",
     phone: "+1-555-0123",
     url: "https://help.example.com"
   }}
@@ -787,7 +787,7 @@ import { NotFound } from '@/app/components/utils';
     }
   ]}
   contact={{
-    email: "support@example.com",
+    email: "paperkitegames@gmail.com",
     phone: "+1-555-0123",
     supportUrl: "/help"
   }}

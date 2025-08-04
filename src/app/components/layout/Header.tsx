@@ -440,9 +440,8 @@ const HeaderLogo = forwardRef<HTMLAnchorElement, HeaderLogoProps>(function Heade
         <polygon points="11,2 20,11 11,20 2,11" stroke="currentColor" strokeWidth="2" fill="none" />
         <line x1="11" y1="2" x2="11" y2="20" stroke="currentColor" strokeWidth="1.5" />
         <line x1="2" y1="11" x2="20" y2="11" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M11 20 Q13 21 14 19" stroke="currentColor" strokeWidth="1.2" fill="none" />
-        {/* Kite tail */}
-        <path d="M14 19 Q17 23 11 25" stroke="currentColor" strokeWidth="1.1" fill="none" />
+        {/* Improved tail: smoother, more natural curve */}
+        <path d="M11 20 Q12 22 10 23 Q8 24 11 25" stroke="currentColor" strokeWidth="1.2" fill="none" />
         <circle cx="11" cy="25" r="0.7" fill="currentColor" />
       </svg>
       <span style={{ display: 'inline-block', textAlign: 'left' }}>

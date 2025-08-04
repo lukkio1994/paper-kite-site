@@ -24,14 +24,14 @@ import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | My Next.js App',
-    default: 'My Next.js App',
+    template: '%s | Paper Kite Games',
+    default: 'Paper Kite Games',
   },
   description: "Clean, scalable Next.js + Tailwind baseline for UI/UX-friendly sites",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://yourproductiondomain.com"),
   openGraph: {
     type: 'website',
-    siteName: 'My Next.js App',
+    siteName: 'Paper Kite',
     images: [
       {
         url: '/opengraph-image.jpg',
@@ -72,6 +72,7 @@ export default async function RootLayout({
       suppressHydrationWarning={true}
     >
       <head>
+        <link rel="icon" href="/favicon.ico" type="image/svg+xml" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
