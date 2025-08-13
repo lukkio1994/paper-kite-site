@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     default: 'Paper Kite Games',
   },
   description: "Paper Kite Games - This Is Not A Dungeon",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.paperkitegames.com/en"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.paperkitegames.com"),
   openGraph: {
     type: 'website',
     siteName: 'Paper Kite',
