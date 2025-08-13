@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     siteName: 'Paper Kite',
     images: [
       {
-        url: '/opengraph-image.jpg',
+        url: '/images/games/tinad/store_capsule_main.png',
         width: 1200,
         height: 630,
-        alt: 'My Next.js App',
+        alt: 'This Is Not A Dungeon',
       },
     ],
   },
