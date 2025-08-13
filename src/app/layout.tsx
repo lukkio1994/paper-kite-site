@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     template: '%s | Paper Kite Games',
     default: 'Paper Kite Games',
   },
-  description: "Clean, scalable Next.js + Tailwind baseline for UI/UX-friendly sites",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://yourproductiondomain.com"),
+  description: "Paper Kite Games - This Is Not A Dungeon",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.paperkitegames.com/en"),
   openGraph: {
     type: 'website',
     siteName: 'Paper Kite',
