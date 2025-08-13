@@ -30,7 +30,7 @@ function PanelContent() {
         For Content Creators
       </Link>
 
-      <a href="#" className="block w-full sm:w-auto" aria-label="Wishlist on Steam">
+      <a href="https://store.steampowered.com/app/3932170/This_Is_Not_A_Dungeon/" className="block w-full sm:w-auto" aria-label="Wishlist on Steam" target="_blank" rel="noopener noreferrer">
         <div className="h-[52px] px-6 bg-black rounded-xl flex items-center justify-center transition hover:opacity-90 mx-auto">
           <Image
             src="/images/icons/steam-wishlist.png"
@@ -173,10 +173,10 @@ export default function HomePage() {
 
       {/* sticky panel */}
       <div
-        className={`fixed left-0 top-0 w-full z-50 transition-all duration-300 pointer-events-none ${
+        className={`fixed left-0 top-0 w-full z-50 transition-all duration-300 ${
           isSticky
             ? "bg-[color:var(--color-tinad-background)/90] backdrop-blur-md shadow-md border-b border-[var(--color-tinad-border)] opacity-100 visible pointer-events-auto"
-            : "opacity-0 invisible"
+            : "opacity-0 invisible pointer-events-none"
         }`}
         style={{ willChange: "opacity, transform" }}
       >
@@ -315,21 +315,7 @@ export default function HomePage() {
         edge="bottom"
       />
 
-      {/* 📜 LAMENT */}
-      <section
-        id="lament"
-        className="w-full bg-[var(--color-tinad-background)] text-[var(--color-tinad-foreground)] py-20 px-4 border-t border-[var(--color-tinad-border)]"
-      >
-        <div className="max-w-3xl mx-auto">
-          <div className="rounded-2xl p-8 md:p-10 bg-[var(--color-tinad-surface)] border border-[var(--color-tinad-border)]">
-            <p className="text-lg leading-relaxed text-[var(--color-tinad-muted)]">
-              “I didn’t ask for this. I just wanted a quiet tower, maybe a cat. Instead, every other day it’s
-              ‘Oh look, another group of shiny‑shoed nitwits here to prove themselves.’ Fine. They want a challenge?
-              I’ll give them a welcome they’ll never forget.”
-            </p>
-          </div>
-        </div>
-      </section>
+
 
       {/* SPIKES: background → primary-dark (teeth pointing down) */}
       <SpikeDivider
@@ -353,7 +339,7 @@ export default function HomePage() {
             Wishlist now and I’ll send you a thank‑you curse. (It’s mostly glitter.)
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#" className="block w-full sm:w-auto" aria-label="Wishlist on Steam">
+            <a href="https://store.steampowered.com/app/3932170/This_Is_Not_A_Dungeon/" className="block w-full sm:w-auto" aria-label="Wishlist on Steam" target="_blank" rel="noopener noreferrer">
               <div className="h-[52px] px-6 bg-black rounded-xl flex items-center justify-center transition hover:opacity-90 mx-auto">
                 <Image
                   src="/images/icons/steam-wishlist.png"
