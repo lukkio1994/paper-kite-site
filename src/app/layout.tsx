@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: '%s | Paper Kite Games',
     default: 'Paper Kite Games',
   },
-  description: "Paper Kite Games - This Is Not A Dungeon",
+  description: "Defend your dungeon retirement home from heroes in this comedic tower defense game. Play as the dungeon, summon monsters, and enjoy strategic base defense fun",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.paperkitegames.com"),
   openGraph: {
     type: 'website',
