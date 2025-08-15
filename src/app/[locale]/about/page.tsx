@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 export default function AboutPage() {
   return (
@@ -15,15 +15,19 @@ export default function AboutPage() {
             </h1>
 
             <p className="text-lg text-muted mb-4">
-              We believe a great game can begin with a <span className="font-semibold text-foreground">simple idea</span>.
-              If it can evoke the feeling of <span className="font-semibold">flying a paper kite</span> when we were
-              younger—light, playful, a little bit magical—then it’s a game worth making and a game worth playing.
+              We believe a great game can begin with a{" "}
+              <span className="font-semibold text-foreground">simple idea</span>
+              . If it can evoke the feeling of{" "}
+              <span className="font-semibold">flying a paper kite</span> when we
+              were younger—light, playful, a little bit magical—then it’s a game
+              worth making and a game worth playing.
             </p>
 
             <p className="text-lg text-muted">
-              You don’t need the latest graphics or a maze of complex systems to have fun.
-              You need a clean core loop, responsive controls, and moments that spark a smile.
-              That’s our north star: <span className="font-semibold">feel-first fun</span>.
+              You don’t need the latest graphics or a maze of complex systems to
+              have fun. You need a clean core loop, responsive controls, and
+              moments that spark a smile. That’s our north star:{" "}
+              <span className="font-semibold">feel-first fun</span>.
             </p>
           </div>
         </div>
@@ -33,8 +37,9 @@ export default function AboutPage() {
       <section className="w-full bg-surface text-foreground py-14 px-4 border-t border-border">
         <div className="max-w-4xl mx-auto">
           <blockquote className="rounded-xl border border-border bg-background/60 p-6 md:p-8 italic leading-relaxed">
-            “On windy afternoons we’d run until the string hummed, watching a paper kite dance overhead.
-            No tutorials. No specs. Just movement, tension, and joy. That’s the feeling we chase in every project.”
+            “On windy afternoons we’d run until the string hummed, watching a
+            paper kite dance overhead. No tutorials. No specs. Just movement,
+            tension, and joy. That’s the feeling we chase in every project.”
           </blockquote>
         </div>
       </section>
@@ -42,23 +47,30 @@ export default function AboutPage() {
       {/* 👥 TEAM */}
       <section className="w-full bg-background text-foreground py-20 px-4 border-t border-border">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Meet the Team</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
+            Meet the Team
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* First row: David, Luis, Carlos */}
             <div className="flex flex-col items-center">
-              {/* <Image src="/images/team/david.png" alt="David Leon - Senior Software Developer" width={96} height={96} className="rounded-full mb-2" /> */}
               <div className="font-semibold">David Leon</div>
               <div className="text-sm text-muted">Senior Software Developer</div>
             </div>
             <div className="flex flex-col items-center">
-              {/* <Image src="/images/team/luis.png" alt="Luis Sequeira - Lead Developer" width={96} height={96} className="rounded-full mb-2" /> */}
               <div className="font-semibold">Luis Sequeira</div>
               <div className="text-sm text-muted">Lead Developer</div>
             </div>
             <div className="flex flex-col items-center">
-              {/* <Image src="/images/team/carlos.png" alt="Carlos Sequeira - UX/UX Designer" width={96} height={96} className="rounded-full mb-2" /> */}
               <div className="font-semibold">Carlos Sequeira</div>
               <div className="text-sm text-muted">UX/UX Designer</div>
             </div>
+            {/* Second row: empty, Logan, empty */}
+            <div className="hidden md:block"></div>
+            <div className="flex flex-col items-center">
+              <div className="font-semibold">B. Logan</div>
+              <div className="text-sm text-muted">Social Media & Community Manager</div>
+            </div>
+            <div className="hidden md:block"></div>
           </div>
         </div>
       </section>
@@ -66,24 +78,29 @@ export default function AboutPage() {
       {/* 🌱 PRINCIPLES (VALUES) */}
       <section className="w-full bg-surface text-foreground py-20 px-4 border-t border-border">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Our Principles</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
+            Our Principles
+          </h2>
 
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-left text-lg text-muted">
             <li>
-              <span className="font-bold text-primary">Simple Core:</span>{' '}
-              One clear idea you can explain in a sentence—and feel in five seconds.
+              <span className="font-bold text-primary">Simple Core:</span> One
+              clear idea you can explain in a sentence—and feel in five seconds.
             </li>
             <li>
-              <span className="font-bold text-primary">Feel Over Features:</span>{' '}
+              <span className="font-bold text-primary">
+                Feel Over Features:
+              </span>{" "}
               If it doesn’t improve the moment-to-moment, it doesn’t ship.
             </li>
             <li>
-              <span className="font-bold text-primary">Toy First:</span>{' '}
-              Make it playful without the layers; systems come after the spark.
+              <span className="font-bold text-primary">Toy First:</span> Make it
+              playful without the layers; systems come after the spark.
             </li>
             <li>
-              <span className="font-bold text-primary">Readable Craft:</span>{' '}
-              Clarity beats spectacle—clean art, snappy feedback, honest challenge.
+              <span className="font-bold text-primary">Readable Craft:</span>{" "}
+              Clarity beats spectacle—clean art, snappy feedback, honest
+              challenge.
             </li>
           </ul>
         </div>
@@ -96,8 +113,8 @@ export default function AboutPage() {
             Want to connect or collaborate?
           </h2>
           <p className="text-lg text-muted mb-6">
-            We love meeting fellow devs, artists, and players. If you share a passion for simple,
-            feel-good games, let’s talk.
+            We love meeting fellow devs, artists, and players. If you share a
+            passion for simple, feel-good games, let’s talk.
           </p>
           <a
             href="mailto:paperkitegames@gmail.com"

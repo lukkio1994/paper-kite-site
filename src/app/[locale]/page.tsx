@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useRef, useState, useMemo } from "react";
 
 /* =========================================================
@@ -21,15 +20,16 @@ function PanelContent() {
         Get Dev Updates
       </a>
 
-      <Link
-        href="/contentcreators"
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfDXGimnhnaJG6x1uf_0jQdYN9sLmiDPAzgjRZPSqs1e3xGrw/viewform?usp=header"
         className="font-semibold py-3 px-6 rounded-xl shadow-md text-center text-lg transition w-full sm:w-auto
           bg-[var(--color-tinad-primary)] text-[var(--color-tinad-white)]
           hover:bg-[var(--color-tinad-primary-light)]
           focus:outline-none focus:ring-2 focus:ring-[var(--color-tinad-primary)]"
+        target="_blank" rel="noopener noreferrer"
       >
         For Content Creators
-      </Link>
+      </a>
 
       <a href="https://store.steampowered.com/app/3932170/This_Is_Not_A_Dungeon/" className="block w-full sm:w-auto" aria-label="Wishlist on Steam" target="_blank" rel="noopener noreferrer">
         <div className="h-[52px] px-6 bg-black rounded-xl flex items-center justify-center transition hover:opacity-90 mx-auto">
