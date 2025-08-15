@@ -10,15 +10,16 @@ import { useEffect, useRef, useState, useMemo } from "react";
 function PanelContent() {
   return (
     <div className="flex flex-col sm:flex-row justify-center items-center gap-4 py-3 px-4 sm:px-6 lg:px-12 max-w-3xl mx-auto">
-      <Link
-        href="/maillist"
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSegO00zObW3ucNv4e6S38XenFV5jGBvQBvmQ-C4zQ-47GWaMQ/viewform?usp=header"
         className="font-semibold py-3 px-6 rounded-xl shadow-md text-center text-lg transition w-full sm:w-auto
           bg-[var(--color-tinad-primary)] text-[var(--color-tinad-white)]
           hover:bg-[var(--color-tinad-primary-light)]
           focus:outline-none focus:ring-2 focus:ring-[var(--color-tinad-primary)]"
+        target="_blank" rel="noopener noreferrer"
       >
         Get Dev Updates
-      </Link>
+      </a>
 
       <Link
         href="/contentcreators"
@@ -350,14 +351,15 @@ export default function HomePage() {
                 />
               </div>
             </a>
-            <Link
-              href="/maillist"
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSegO00zObW3ucNv4e6S38XenFV5jGBvQBvmQ-C4zQ-47GWaMQ/viewform?usp=header"
               className="font-semibold py-3 px-6 rounded-xl text-lg transition w-full sm:w-auto
                         bg-[var(--color-tinad-white)] text-[var(--color-tinad-primary-dark)]
                         hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[var(--color-tinad-white)]"
+              target="_blank" rel="noopener noreferrer"
             >
               Get Dev Updates
-            </Link>
+            </a>
           </div>
         </div>
       </section>

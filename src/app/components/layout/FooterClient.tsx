@@ -13,7 +13,6 @@ const GitHubIcon = (props: SVGProps<SVGSVGElement>) => (
 
 import { useResolvedFooterConfig } from "@/lib/config-resolver";
 import { type SocialLinkItem } from "@/lib/footer-config";
-import Link from "next/link";
 import type { SVGProps } from "react";
 // Official X (Twitter) icon (brand SVG)
 const XIcon = (props: SVGProps<SVGSVGElement>) => (
@@ -130,12 +129,13 @@ export default function FooterClient() {
           })}
         </div>
         {/* Mailing List Bar */}
-        <Link
-          href="/maillist"
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSegO00zObW3ucNv4e6S38XenFV5jGBvQBvmQ-C4zQ-47GWaMQ/viewform?usp=header"
           className="block w-full max-w-xl mx-auto bg-[var(--color-cstm-primary)] text-[var(--color-cstm-foreground)] font-bold py-3 rounded-md shadow-lg text-center text-base tracking-wide hover:bg-[var(--color-cstm-primary-light)] transition mb-12"
+          target="_blank" rel="noopener noreferrer"
         >
           SUBSCRIBE TO OUR MAILING LIST
-        </Link>
+        </a>
       </div>
 
       {/* Logo and Company Name */}
